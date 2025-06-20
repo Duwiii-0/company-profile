@@ -5,12 +5,12 @@
 @section('content')
 
     <section id="home" class="relative
-                min-h-screen
-                flex items-center justify-center
-                text-white overflow-hidden
-                bg-gradient-to-br from-red-700 via-red-600 to-pink-700 {{-- Gradient background yang lebih gelap --}}
-                p-8
-                ">
+                    min-h-screen
+                    flex items-center justify-center
+                    text-white overflow-hidden
+                    bg-gradient-to-br from-red-700 via-red-600 to-pink-700 {{-- Gradient background yang lebih gelap --}}
+                    p-8
+                    ">
 
         <div class="absolute inset-0 pattern-plus-grid opacity-20"></div> {{-- Akan ditambahkan di CSS nanti --}}
 
@@ -24,13 +24,13 @@
         </div>
 
         <div class="absolute
-                        top-1/2 right-0 md:right-10 {{-- Sesuaikan posisi kanan --}}
-                        transform -translate-y-1/2
-                        text-[18rem] md:text-[25rem] {{-- Ukuran lebih besar --}}
-                        font-bold text-white opacity-10 {{-- Lebih transparan --}}
-                        leading-none z-0
-                        flex flex-col {{-- Tambahkan flex flex-col untuk menumpuk angka --}}
-                        ">
+                            top-1/2 right-0 md:right-10 {{-- Sesuaikan posisi kanan --}}
+                            transform -translate-y-1/2
+                            text-[18rem] md:text-[25rem] {{-- Ukuran lebih besar --}}
+                            font-bold text-white opacity-10 {{-- Lebih transparan --}}
+                            leading-none z-0
+                            flex flex-col {{-- Tambahkan flex flex-col untuk menumpuk angka --}}
+                            ">
             <span>20</span> {{-- Angka 20 --}}
             <span>25</span> {{-- Angka 25 --}}
         </div>
