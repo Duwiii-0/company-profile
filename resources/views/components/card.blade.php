@@ -1,5 +1,5 @@
 <section class="testi space-y-5 flex flex-col items-center">
-    <div class="testi-container space-x-5 w-[70vw] pl-5 pr-4">
+    <div class="testi-container space-x-5 w-[70vw] pl-3">
         <div class="product-card bg-red-700/50 w-lg rounded-lg p-5 shrink-0 text-white">
                 <div class="flex flex-col space-y-3">
                     <h2 class="text-xl font-bold">Beyond Expectation!</h2>
@@ -139,7 +139,7 @@
         </div>
 
     </div>
-    <div class="flex flex-row items-center justify-center space-x-5">
+    <div class="flex flex-row items-center justify-center space-x-10">
          <button class="pre-btn w-10 h-10 rounded-full flex items-center justify-center shadow-lg">
             <x-icons.right-arrow-2 class="w-6 h-6"/>
     </button>
