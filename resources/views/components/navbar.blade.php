@@ -6,7 +6,7 @@
         {{-- Pastikan ini ada: flex-grow dan justify-center pada ul --}}
         <ul class="flex-grow flex justify-center space-x-6 items-center">
             <li><a href="#home" class="text-white hover:text-gray-200 transition duration-300">Home</a></li>
-            <li><a href="#about" class="text-white hover:text-gray-200 transition duration-300">About</a></li>
+            <li><a href="" class="text-white hover:text-gray-200 transition duration-300">About</a></li>
             <li><a href="#services" class="text-white hover:text-gray-200 transition duration-300">Services</a></li>
             <li><a href="#projects" class="text-white hover:text-gray-200 transition duration-300">Projects</a></li>
         </ul>

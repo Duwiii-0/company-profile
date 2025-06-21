@@ -189,8 +189,8 @@
                 These values shape our culture, inspire our people, and reflect the standards we uphold in every partnership
             </p>
         </div>
-        <div class="grid grid-cols-4 gap-10 mx-10">
-            <div class="flex flex-col items-center justify-center space-y-5">
+        <div class="grid grid-cols-4 gap-10 mx-10 items-start">
+            <div class="flex flex-col items-center justify-center space-y-5 ">
                 <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md shadow-white">
                     <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
                 </div>
@@ -199,7 +199,7 @@
                     Trust is built through accountability and ethical decision-making.
                 </p>
             </div>
-            <div class="flex flex-col items-center justify-center space-y-5">
+            <div class="flex flex-col items-center justify-center space-y-5 ">
                 <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md shadow-white">
                     <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
                 </div>
@@ -207,7 +207,7 @@
                 <p class=" text-center ">We listen, we care, and we are committed to creating value for those we serve
                 </p>
             </div>
-            <div class="flex flex-col items-center justify-center space-y-5">
+            <div class="flex flex-col items-center justify-center space-y-5 ">
                 <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md shadow-white">
                     <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
                 </div>
@@ -216,7 +216,7 @@
                     our clients — to create impactful outcomes.
                 </p>
             </div>
-            <div class="flex flex-col items-center justify-center space-y-5">
+            <div class="flex flex-col items-center justify-center space-y-5 ">
                 <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md shadow-white">
                     <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
                 </div>
@@ -228,24 +228,9 @@
         </div>
     </section>
 
-    <section id="misi" class="py-16">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-4">Misi Kami</h2>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <p class="text-gray-700 mb-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="flex items-center space-x-2">
-                        <span class="text-purple-500 text-xl"><i class="fas fa-handshake"></i></span>
-                        <p>Kerja Sama</p>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <span class="text-orange-500 text-xl"><i class="fas fa-users"></i></span>
-                        <p>Pemberdayaan</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="testi" class="py-16 h-[90vh]">
+        <h2 class="text-3xl font-bold mb-4 text-black text-shadow-glow text-center">Experince Shared By<br>Our Clients</h2>
+        <x-card/>
     </section>
 
     <section id="clients" class="bg-gray-100 py-16">
@@ -254,20 +239,6 @@
             <div class="flex justify-center">
                 <x-slider />
             </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section py-16">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-center">Our Projects</h2>
-            <p class="text-center text-gray-700">TBD: Tambahkan konten proyek Anda di sini.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section bg-gray-200 py-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4">Contact Us</h2>
-            <p class="text-gray-700">TBD: Tambahkan form kontak atau informasi kontak di sini.</p>
         </div>
     </section>
 

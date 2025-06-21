@@ -63,3 +63,20 @@ html {
     background-repeat: no-repeat; /* Opsional: Agar tidak berulang jika contain */
     background-position: center;
 }
+
+.testi-container{
+    display: flex;
+    flex-direction: row;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    flex-shrink: 0;
+}
+
+.testi-container::-webkit-scrollbar{
+    display: none;
+}
+
+.pre-btn, .nxt-btn{
+    top: 0;
+    cursor: pointer;
+}
