@@ -302,15 +302,6 @@
                 </div>
             </div>
         </div>
-
-        {{-- Scroll indicator --}}
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400">
-            <div class="animate-bounce">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-            </div>
-        </div>
     </section>
 
     {{-- Custom CSS for animations --}}
@@ -822,50 +813,167 @@
         </div>
     </section>
 
-    <section class="py-16 bg-gray-50 visi space-y-10">
-        <div class="flex flex-col items-center mt-10 mb-20">
-            <h2 class="text-5xl font-bold mb-8 text-white">The Values We Honor</h2>
-            <p class="text-white mb-4 text-center">At the core of our company lies a set of values that guide every action
-                we take.<br>
-                These values shape our culture, inspire our people, and reflect the standards we uphold in every partnership
-            </p>
+    <section class="py-16 bg-gray-50 visi space-y-10 relative overflow-hidden">
+        <!-- Enhanced background overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
+
+        <!-- Animated background elements -->
+        <div class="absolute top-20 left-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-40 h-40 bg-pink-500/10 rounded-full blur-xl animate-pulse delay-1000">
         </div>
-        <div class="grid grid-cols-4 gap-10 mx-10 items-start">
-            <div class="flex flex-col items-center justify-center space-y-5 ">
-                <div class="h-40 w-46 bg-white p-5 flex justify-center items-center rounded-xl">
-                    <img src="{{ Vite::asset('resources/images/integrity.png') }}" alt="integrity">
+        <div class="absolute top-1/2 left-1/3 w-24 h-24 bg-red-400/10 rounded-full blur-xl animate-pulse delay-500"></div>
+
+        <div class="relative z-10">
+            <div class="flex flex-col items-center mt-10 mb-20">
+                <div class="text-center mb-8">
+                    <h2
+                        class="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-red-100 to-pink-200 bg-clip-text text-transparent leading-tight">
+                        The Values We Honor
+                    </h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-red-400 to-pink-400 mx-auto rounded-full mb-8"></div>
                 </div>
-                <p class="mb-2 text-2xl text-white">Integrity</p>
-                <p class=" text-center text-white">We act with honesty and transparency in everything we do.
-                    Trust is built through accountability and ethical decision-making.
+                <p class="text-xl text-gray-200 mb-4 text-center max-w-4xl leading-relaxed">
+                    At the core of our company lies a set of values that guide every action we take.<br>
+                    <span class="text-red-200">These values shape our culture, inspire our people, and reflect the standards
+                        we uphold in every partnership</span>
                 </p>
             </div>
-            <div class="flex flex-col items-center justify-center space-y-5 ">
-                <div class="h-40 w-46 bg-white p-5 flex justify-center items-center rounded-xl shadow-md">
-                    <img src="{{ Vite::asset('resources/images/customer-focus.png') }}" alt="customer-focus">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-10 items-start">
+                <!-- Integrity -->
+                <div class="group flex flex-col items-center justify-center space-y-5 relative cursor-pointer">
+                    <!-- Glow effect behind card -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 scale-110">
+                    </div>
+
+                    <div
+                        class="relative h-40 w-40 bg-gradient-to-br from-white to-gray-50 group-hover:from-red-50 group-hover:to-pink-50 p-6 flex justify-center items-center rounded-2xl shadow-2xl border border-white/20 group-hover:border-red-200/50 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 backdrop-blur-sm">
+                        <img src="{{ Vite::asset('resources/images/integrity.png') }}" alt="integrity"
+                            class="w-16 h-16 group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110">
+
+                        <!-- Icon background glow -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-red-400/20 to-pink-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        </div>
+                    </div>
+
+                    <div class="text-center space-y-4">
+                        <h3 class="text-3xl font-bold text-white group-hover:text-red-200 transition-colors duration-700">
+                            Integrity
+                        </h3>
+                        <p class="text-gray-200 leading-relaxed group-hover:text-white transition-colors duration-700">
+                            We act with honesty and transparency in everything we do. Trust is built through accountability
+                            and ethical decision-making.
+                        </p>
+                    </div>
+
+                    <!-- Decorative bottom line -->
+                    <div
+                        class="w-0 h-1 bg-gradient-to-r from-red-400 to-pink-400 group-hover:w-full transition-all duration-700 rounded-full">
+                    </div>
                 </div>
-                <p class="mb-2 text-2xl text-white">Customer Focus</p>
-                <p class=" text-center text-white">We listen, we care, and we are committed to creating value for those we
-                    serve
-                </p>
-            </div>
-            <div class="flex flex-col items-center justify-center space-y-5 ">
-                <div class="h-40 w-46 bg-white p-5 flex justify-center items-center rounded-xl shadow-md">
-                    <img src="{{ Vite::asset('resources/images/communication.png') }}" alt="collaboration">
+
+                <!-- Customer Focus -->
+                <div class="group flex flex-col items-center justify-center space-y-5 relative cursor-pointer">
+                    <!-- Glow effect behind card -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 scale-110">
+                    </div>
+
+                    <div
+                        class="relative h-40 w-40 bg-gradient-to-br from-white to-gray-50 group-hover:from-red-50 group-hover:to-pink-50 p-6 flex justify-center items-center rounded-2xl shadow-2xl border border-white/20 group-hover:border-red-200/50 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 backdrop-blur-sm">
+                        <img src="{{ Vite::asset('resources/images/customer-focus.png') }}" alt="customer-focus"
+                            class="w-16 h-16 group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110">
+
+                        <!-- Icon background glow -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-red-400/20 to-pink-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        </div>
+                    </div>
+
+                    <div class="text-center space-y-4">
+                        <h3 class="text-3xl font-bold text-white group-hover:text-red-200 transition-colors duration-700">
+                            Customer Focus
+                        </h3>
+                        <p class="text-gray-200 leading-relaxed group-hover:text-white transition-colors duration-700">
+                            We listen, we care, and we are committed to creating value for those we serve
+                        </p>
+                    </div>
+
+                    <!-- Decorative bottom line -->
+                    <div
+                        class="w-0 h-1 bg-gradient-to-r from-red-400 to-pink-400 group-hover:w-full transition-all duration-700 rounded-full">
+                    </div>
                 </div>
-                <p class="mb-2 text-2xl text-white">Collaboration</p>
-                <p class=" text-center text-white">We believe in the power of teamwork across departments, with partners,
-                    and with our clients to create impactful outcomes.
-                </p>
-            </div>
-            <div class="flex flex-col items-center justify-center space-y-5 ">
-                <div class="h-40 w-46 bg-white p-5 flex justify-center items-center rounded-xl shadow-md">
-                    <img src="{{ Vite::asset('resources/images/exelence.png') }}" alt="exellence">
+
+                <!-- Collaboration -->
+                <div class="group flex flex-col items-center justify-center space-y-5 relative cursor-pointer">
+                    <!-- Glow effect behind card -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-110">
+                    </div>
+
+                    <div
+                        class="relative h-40 w-40 bg-gradient-to-br from-white to-gray-50 group-hover:from-red-50 group-hover:to-pink-50 p-6 flex justify-center items-center rounded-2xl shadow-2xl border border-white/20 group-hover:border-red-200/50 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 backdrop-blur-sm">
+                        <img src="{{ Vite::asset('resources/images/communication.png') }}" alt="collaboration"
+                            class="w-16 h-16 group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110">
+
+                        <!-- Icon background glow -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-red-400/20 to-pink-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        </div>
+                    </div>
+
+                    <div class="text-center space-y-4">
+                        <h3 class="text-3xl font-bold text-white group-hover:text-red-200 transition-colors duration-700">
+                            Collaboration
+                        </h3>
+                        <p class="text-gray-200 leading-relaxed group-hover:text-white transition-colors duration-700">
+                            We believe in the power of teamwork across departments, with partners, and with our clients to
+                            create impactful outcomes.
+                        </p>
+                    </div>
+
+                    <!-- Decorative bottom line -->
+                    <div
+                        class="w-0 h-1 bg-gradient-to-r from-red-400 to-pink-400 group-hover:w-full transition-all duration-700 rounded-full">
+                    </div>
                 </div>
-                <p class="mb-2 text-2xl text-white">Excellence</p>
-                <p class=" text-center text-white">We strive to deliver the highest quality in our work, constantly seeking
-                    innovation and improvement.
-                </p>
+
+                <!-- Excellence -->
+                <div class="group flex flex-col items-center justify-center space-y-5 relative cursor-pointer">
+                    <!-- Glow effect behind card -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 scale-110">
+                    </div>
+
+                    <div
+                        class="relative h-40 w-40 bg-gradient-to-br from-white to-gray-50 group-hover:from-red-50 group-hover:to-pink-50 p-6 flex justify-center items-center rounded-2xl shadow-2xl border border-white/20 group-hover:border-red-200/50 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 backdrop-blur-sm">
+                        <img src="{{ Vite::asset('resources/images/exelence.png') }}" alt="excellence"
+                            class="w-16 h-16 group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110">
+
+                        <!-- Icon background glow -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-red-400/20 to-pink-600/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                        </div>
+                    </div>
+
+                    <div class="text-center space-y-4">
+                        <h3 class="text-3xl font-bold text-white group-hover:text-red-200 transition-colors duration-700">
+                            Excellence
+                        </h3>
+                        <p class="text-gray-200 leading-relaxed group-hover:text-white transition-colors duration-700">
+                            We strive to deliver the highest quality in our work, constantly seeking innovation and
+                            improvement.
+                        </p>
+                    </div>
+
+                    <!-- Decorative bottom line -->
+                    <div
+                        class="w-0 h-1 bg-gradient-to-r from-red-400 to-pink-400 group-hover:w-full transition-all duration-700 rounded-full">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
