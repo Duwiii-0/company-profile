@@ -75,9 +75,9 @@
                 <h3 class="text-lg font-semibold mb-5 text-white">Find Us</h3>
                 <div class="space-y-4">
                     <!-- Address -->
-                    <div class="contact-item">
+                    <div class="">
                         <p class="text-red-200 text-sm mb-1">Office Hours: Mon - Fri : 8am - 9pm</p>
-                        <div class="text-red-100 text-sm leading-relaxed">
+                        <div class="text-red-100 contact-item text-sm leading-relaxed">
                             <strong class="text-white">PT Adipratama Kreatif Solusi</strong><br>
                             Gedung Cyber 2, Lt 15,<br>
                             Jl. HR. Rasuna Said Blok X-5 No.13<br>
@@ -87,21 +87,25 @@
                     </div>
 
                     <!-- Email -->
-                    <div class="contact-item">
+                    <div class="">
                         <p class="text-red-200 text-sm mb-1">Email</p>
-                        <a href="mailto:adipratama@gmail.com"
-                            class="text-red-100 hover:text-white transition-colors duration-300">
-                            adipratama@gmail.com
-                        </a>
+                        <div class="contact-item">
+                            <a href="mailto:adipratama@gmail.com"
+                                class="text-red-100 hover:text-white transition-colors duration-300">
+                                adipratama@gmail.com
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Phone -->
-                    <div class="contact-item">
+                    <div class="">
                         <p class="text-red-200 text-sm mb-1">Phone</p>
-                        <a href="tel:+628121302086"
-                            class="text-red-100 hover:text-white transition-colors duration-300">
-                            +62-812-1302-0861
-                        </a>
+                        <div class="contact-item">
+                            <a href="tel:+628121302086"
+                                class="text-red-100 hover:text-white transition-colors duration-300">
+                                +62-812-1302-0861
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,7 +141,7 @@
                 </a>
                 <a href="https://twitter.com/adipratama" target="_blank"
                     class="social-icon w-10 h-10 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                    <x-icons.x class="w-5 h-5 text-white" />
+                    <x-icons.x class="w-5 h-5 text-white " />
                 </a>
             </div>
         </div>

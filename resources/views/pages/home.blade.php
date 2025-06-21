@@ -977,12 +977,7 @@
             </div>
         </div>
     </section>
-
-    <section id="testi" class="py-16 h-[90vh]">
-        <h2 class="text-5xl font-bold mb-20 text-black text-shadow-glow text-center">Experince Shared By<br>Our Clients</h2>
-        <x-card />
-    </section>
-
+    
     <section id="clients" class="bg-gray-100 py-16">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold mb-8 text-center"> Our Clients</h2>
@@ -992,4 +987,9 @@
         </div>
     </section>
 
+
+    <section id="testi" class="py-16 h-[90vh]">
+        <h2 class="text-5xl font-bold mb-20 text-black text-shadow-glow text-center">Experince Shared By<br>Our Clients</h2>
+        <x-card />
+    </section>
 @endsection
