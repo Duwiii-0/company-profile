@@ -71,7 +71,7 @@
     </section>
 
     <!-- About Us Section -->
-    <section class="w-full h-screen bg-white flex">
+    <section id="about" class="w-full h-screen bg-white flex">
         <!-- Left Side - Office Image -->
         <div class="w-2/5 h-full">
             <img src="{{ Vite::asset('resources/images/Office.jpg') }}" alt="Our Office" class="w-full h-full object-cover">

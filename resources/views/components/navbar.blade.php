@@ -23,13 +23,13 @@
             </li>
             <li>
                 <a href="#services"
-                    class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold{{ request()->is('services') ? 'active' : '' }}">
+                    class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold {{ request()->is('services') ? 'active' : '' }}">
                     Services
                 </a>
             </li>
             <li>
                 <a href="#projects"
-                    class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold{{ request()->is('projects') ? 'active' : '' }}">
+                    class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold {{ request()->is('projects') ? 'active' : '' }}">
                     Projects
                 </a>
             </li>
