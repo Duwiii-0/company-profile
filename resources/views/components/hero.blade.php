@@ -8,7 +8,7 @@
         </div>
 
         {{-- Plus pattern: Hanya di area atas --}}
-        <div class="absolute top-0 left-0 right-0 h-2/5 bg-repeat opacity-35"
+        <div class="absolute top-0 left-22 right-0 w-[38%] h-2/5 bg-repeat opacity-80"
             style="background-image: url('data:image/svg+xml;utf8,<svg width=&quot;80&quot; height=&quot;80&quot; viewBox=&quot;0 0 80 80&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path d=&quot;M40 20V60M20 40H60&quot; stroke=&quot;white&quot; stroke-opacity=&quot;0.5&quot; stroke-width=&quot;1&quot;/></svg>'); background-size: 80px 80px; background-position: 0 0;">
         </div>
     </div>
@@ -41,5 +41,8 @@
         style="text-shadow: 2px 2px 8px rgba(0,0,0,0.3); font-family: 'Inter', sans-serif;">
         <span>20</span>
         <span class="-mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20">25</span>
+        <div class="absolute top-0 left-0 right-0 w-1/2 h-2/5 bg-repeat opacity-80"
+            style="background-image: url('data:image/svg+xml;utf8,<svg width=&quot;80&quot; height=&quot;80&quot; viewBox=&quot;0 0 80 80&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path d=&quot;M40 20V60M20 40H60&quot; stroke=&quot;white&quot; stroke-opacity=&quot;0.5&quot; stroke-width=&quot;1&quot;/></svg>'); background-size: 80px 80px; background-position: 0 0;">
+        </div>
     </div>
 </section>

@@ -6,104 +6,116 @@
 
     <x-hero />
 
-    <!-- Welcome Section - mengganti section yang sudah ada setelah hero -->
-    <section class="w-full h-[75vh] bg-gray-100 flex">
-        <!-- Left content area -->
-        <div class="w-full flex flex-col justify-center px-20 py-16">
-            <div class="max-w-2xl">
-                <h1 class="text-5xl font-bold text-gray-800 mb-8">Welcome</h1>
+    <!-- Welcome Section - Simple dan sesuai Figma -->
+    <section class="relative w-full min-h-screen">
+        <!-- Background utama putih -->
+        <div class="absolute inset-0 bg-white"></div>
 
-                <p class="text-gray-600 text-base leading-relaxed mb-6">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-                </p>
+        <!-- Red background area - diagonal cut -->
+        <div class="absolute top-0 right-0 w-1/5 h-full bg-gradient-to-br from-red-400 via-red-500 to-red-600"
+            style="clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);">
 
-                <p class="text-gray-600 text-base leading-relaxed mb-12">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Laboris nisi ut aliquip ex ea commodo consequat. Ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur.
-                </p>
-
-                <!-- CEO Info -->
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-1">John Doe</h3>
-                    <p class="text-gray-500 italic">Chief Executive Operations</p>
-                </div>
+            <!-- Plus pattern di area merah -->
+            <div class="absolute inset-0 opacity-70"
+                style="background-image: url('data:image/svg+xml;utf8,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path d=&quot;M30 15V45M15 30H45&quot; stroke=&quot;white&quot; stroke-opacity=&quot;0.4&quot; stroke-width=&quot;1&quot;/></svg>'); background-size: 120px 60px;">
             </div>
         </div>
 
-        <!-- Right side - CEO Image -->
-        <div class="w-full flex justify-center items-center px-10">
-            <div class="bg-gradient-to-br from-red-400 to-red-600 relative overflow-hidden"
-                style="border-radius: 0 0 0 100px;">
-                <!-- Decorative elements -->
-                <div class="absolute top-10 right-10 w-2 h-2 bg-white/30 rounded-full"></div>
-                <div class="absolute top-20 right-20 w-1 h-1 bg-white/20 rounded-full"></div>
-                <div class="absolute top-32 right-16 w-1 h-1 bg-white/20 rounded-full"></div>
-                <div class="absolute top-44 right-24 w-2 h-2 bg-white/30 rounded-full"></div>
+        <div>
+            <div class="absolute -top-2 -left-1.5 w-3 h-3 bg-red-400 rotate-45"></div>
+            <div class="absolute bottom-0 -left-1 w-2 h-2 bg-red-400 rotate-45"></div>
+        </div>
 
+        <!-- Content Container -->
+        <div class="relative z-20 flex min-h-screen">
+            <!-- Left Content Area -->
+            <div class="w-3/5 flex items-center px-16 py-20">
+                <div class="max-w-2xl">
+                    <h1 class="text-6xl font-bold text-gray-800 mb-8">Welcome</h1>
+
+                    <p class="text-gray-600 text-base leading-relaxed mb-6">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        sint
+                        occaecat cupidatat ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat.
+                    </p>
+
+                    <p class="text-gray-600 text-base leading-relaxed mb-12">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Laboris nisi ut aliquip ex ea commodo consequat. Ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur.
+                    </p>
+
+                    <!-- CEO Info -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">John Doe</h3>
+                        <p class="text-gray-500 italic">Chief Executive Operations</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Image Area -->
+            <div class="w-2/5 flex justify-center items-center relative px-8">
                 <!-- CEO Image Container -->
-                <div class="w-80 h-96 bg-gray-200 m-8 rounded-lg shadow-xl overflow-hidden">
-                    <img src="{{ Vite::asset('resources/images/Officeman.jpg') }}" alt="John Doe - CEO"
-                        class="w-full h-full object-cover">
+                <div class="relative z-30">
+                    <div class="w-72 h-100 bg-gray-200 rounded-2xl shadow-xl overflow-hidden">
+                        <img src="{{ Vite::asset('resources/images/Officeman.jpg') }}" alt="John Doe - CEO"
+                            class="w-full h-full object-cover">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Us Section -->
-    <section class="w-full h-[80vh] bg-white flex">
+    <section class="w-full h-screen bg-white flex">
         <!-- Left Side - Office Image -->
-        <div class="w-1/2 h-full relative">
-            <div
-                class="h-full bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center relative overflow-hidden">
-                <!-- Office Image Container -->
-                <div class="w-4/5 h-3/5 bg-gray-100 rounded-lg shadow-2xl overflow-hidden">
-                    <img src="{{ Vite::asset('resources/images/office.jpg') }}" alt="Our Office"
-                        class="w-full h-full object-cover">
-                </div>
-            </div>
+        <div class="w-2/5 h-full">
+            <img src="{{ Vite::asset('resources/images/office.jpg') }}" alt="Our Office" class="w-full h-full object-cover">
         </div>
 
         <!-- Right Side - About Content -->
-        <div class="w-1/2 h-full flex flex-col justify-center px-12 py-16 bg-white relative">
-            <!-- Decorative corner -->
-            <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-red-400 to-red-600 rounded-bl-full"></div>
+        <div class="w-1/2 h-full flex flex-col justify-center px-16 py-16 bg-white relative rounded-bl-[80px]">
+            <!-- Decorative corner element -->
+            <div class="absolute left-190 top-0 right-0 w-70 h-213 bg-red-500 rounded-bl-[100px]"></div>
 
-            <div class="space-y-6 max-w-lg">
+            <div class="space-y-6 max-w-lg relative z-10">
                 <!-- About Us Heading -->
-                <div>
-                    <h2 class="text-4xl font-bold text-gray-800 mb-6">About Us</h2>
-                    <p class="text-gray-600 text-base leading-relaxed mb-6">
+                <h2 class="text-4xl font-bold text-gray-800 mb-8">About Us</h2>
+
+                <div class="space-y-4">
+                    <p class="text-gray-600 text-base leading-relaxed">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ullamco laboris nisi ut
                         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        occaecat cupidatat ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
-                    <p class="text-gray-600 text-base leading-relaxed mb-6">
+
+                    <p class="text-gray-600 text-base leading-relaxed">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Laboris nisi ut aliquip
                         ex ea commodo consequat. Ullamco laboris nisi ut aliquip ex ea commodo
                         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                         cillum dolore eu fugiat nulla pariatur.
                     </p>
+                </div>
 
-                    <!-- Learn More Button -->
-                    <div class="mt-8">
-                        <a href="{{ route('aboutus') }}"
-                            class="group inline-flex items-center bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                            Learn More
-                            <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
+                <!-- Learn More Button -->
+                <div class="mt-8">
+                    <a href="{{ route('aboutus') }}"
+                        class="group inline-flex items-center bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Learn More
+                        <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
@@ -148,7 +160,7 @@
                             Consultant</span>
                         <span
                             class="transform translate-y-0 opacity-0 transition-all duration-300 
-                                                                group-hover:translate-y-1 text-start group-hover:opacity-100 text-gray-700">Kami
+                                                                                                                                                                                                                                                        group-hover:translate-y-1 text-start group-hover:opacity-100 text-gray-700">Kami
                             membangun
                             situs web
                             responsif dan berkinerja tinggi sesuai kebutuhan Anda.
@@ -161,7 +173,7 @@
                             Certification</span>
                         <span
                             class="transform translate-y-0 opacity-0 transition-all duration-300 
-                                                                group-hover:translate-y-1 text-start group-hover:opacity-100 text-gray-700">Menciptakan
+                                                                                                                                                                                                                                                        group-hover:translate-y-1 text-start group-hover:opacity-100 text-gray-700">Menciptakan
                             desain
                             visual yang menarik dan efektif untuk branding Anda.</span>
                     </div>
@@ -172,7 +184,7 @@
                             Coding Platform</span>
                         <span
                             class="transform translate-y-0 opacity-0 transition-all duration-300 
-                                                                group-hover:translate-y-1 text-start group-hover:opacity-100 text-gray-700">Strategi
+                                                                                                                                                                                                                                                        group-hover:translate-y-1 text-start group-hover:opacity-100 text-gray-700">Strategi
                             pemasaran
                             digital untuk meningkatkan jangkauan dan konversi Anda.</span>
                     </div>
@@ -230,7 +242,7 @@
 
     <section id="testi" class="py-16 h-[90vh]">
         <h2 class="text-3xl font-bold mb-4 text-black text-shadow-glow text-center">Experince Shared By<br>Our Clients</h2>
-        <x-card/>
+        <x-card />
     </section>
 
     <section id="clients" class="bg-gray-100 py-16">
