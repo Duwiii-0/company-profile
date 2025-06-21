@@ -9,7 +9,7 @@
                     <div class="flex justify-between items-center space-x-2">
                         <div class="flex space-x-5 items-center">
                             <div class="h-16 w-16 rounded-full ml-1 mt-3">
-                                <img src="{{ Vite::asset('resources/images/pofile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
+                                <img src="{{ Vite::asset('resources/images/profile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
                             </div>
                             <div class="flex flex-col mt-2">
                                 <h2 class="text-xl font-semibold">Rafif Dwiarka</h2>
@@ -32,7 +32,7 @@
                     <div class="flex justify-between items-center space-x-2">
                         <div class="flex space-x-5 items-center">
                             <div class="h-16 w-16 rounded-full ml-1 mt-3">
-                                <img src="{{ Vite::asset('resources/images/pofile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
+                                <img src="{{ Vite::asset('resources/images/profile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
                             </div>
                             <div class="flex flex-col mt-2">
                                 <h2 class="text-xl font-semibold">Rafif Dwiarka</h2>
@@ -55,7 +55,7 @@
                     <div class="flex justify-between items-center space-x-2">
                         <div class="flex space-x-5 items-center">
                             <div class="h-16 w-16 rounded-full ml-1 mt-3">
-                                <img src="{{ Vite::asset('resources/images/pofile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
+                                <img src="{{ Vite::asset('resources/images/profile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
                             </div>
                             <div class="flex flex-col mt-2">
                                 <h2 class="text-xl font-semibold">Rafif Dwiarka</h2>
@@ -78,7 +78,7 @@
                     <div class="flex justify-between items-center space-x-2">
                         <div class="flex space-x-5 items-center">
                             <div class="h-16 w-16 rounded-full ml-1 mt-3">
-                                <img src="{{ Vite::asset('resources/images/pofile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
+                                <img src="{{ Vite::asset('resources/images/profile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
                             </div>
                             <div class="flex flex-col mt-2">
                                 <h2 class="text-xl font-semibold">Rafif Dwiarka</h2>
@@ -101,7 +101,7 @@
                     <div class="flex justify-between items-center space-x-2">
                         <div class="flex space-x-5 items-center">
                             <div class="h-16 w-16 rounded-full ml-1 mt-3">
-                                <img src="{{ Vite::asset('resources/images/pofile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
+                                <img src="{{ Vite::asset('resources/images/profile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
                             </div>
                             <div class="flex flex-col mt-2">
                                 <h2 class="text-xl font-semibold">Rafif Dwiarka</h2>
@@ -124,7 +124,7 @@
                     <div class="flex justify-between items-center space-x-2">
                         <div class="flex space-x-5 items-center">
                             <div class="h-16 w-16 rounded-full ml-1 mt-3">
-                                <img src="{{ Vite::asset('resources/images/pofile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
+                                <img src="{{ Vite::asset('resources/images/profile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
                             </div>
                             <div class="flex flex-col mt-2">
                                 <h2 class="text-xl font-semibold">Rafif Dwiarka</h2>

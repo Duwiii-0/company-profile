@@ -74,7 +74,7 @@
     <section class="w-full h-screen bg-white flex">
         <!-- Left Side - Office Image -->
         <div class="w-2/5 h-full">
-            <img src="{{ Vite::asset('resources/images/office.jpg') }}" alt="Our Office" class="w-full h-full object-cover">
+            <img src="{{ Vite::asset('resources/images/Office.jpg') }}" alt="Our Office" class="w-full h-full object-cover">
         </div>
 
         <!-- Right Side - About Content -->
@@ -148,7 +148,7 @@
                         <div
                             class="relative bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 group-hover:border-red-200">
                             <div class="rounded-xl overflow-hidden bg-gradient-to-br from-gray-50 to-white p-4">
-                                <img src="{{ Vite::asset('resources/images/skdakds.png') }}" alt="Adipratama Company"
+                                <img src="{{ Vite::asset('resources/images/dummy.png') }}" alt="Adipratama Company"
                                     class="w-full h-full object-contain rounded-lg hover:scale-105 transition-transform duration-700">
                             </div>
 

@@ -1,10 +1,10 @@
 import './bootstrap';
 
-import  '../images/gojek.png';
-import  '../images/google.png';
-import  '../images/meta.png';
-import  '../images/playstation.png';
-import  '../images/roblox.png';
+
+// Import all images at once
+const images = import.meta.glob('../images/*.{png,jpg,jpeg,gif,svg}', { 
+    eager: true 
+});
 
 const testiContainer = [...document.querySelectorAll('.testi-container')];
 
