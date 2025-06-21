@@ -1,14 +1,7 @@
-
-@import "tailwindcss/preflight"; /* Menggantikan @tailwind base; */
-@import "tailwindcss/utilities";  /* Menggantikan @tailwind components; dan @tailwind utilities; */
+@import "tailwindcss";
 
 html {
     scroll-behavior: smooth; /* Ini penting untuk smooth scrolling */
-}
-
-/* Untuk mengkompensasi navbar fixed */
-body {
-    padding-top: 64px; /* Sesuaikan angka ini dengan tinggi navbar Anda */
 }
 
 /* Untuk efek glow pada teks H1 di hero section */
@@ -17,20 +10,56 @@ body {
                  0 0 15px rgba(255, 255, 255, 0.4);
 }
 
-/* Untuk pola plus grid di background hero section */
-.pattern-plus-grid {
-    background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-    background-size: 30px 30px; /* Sesuaikan ukuran grid */
-    background-position: 0 0;
+.slider{
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
 }
 
-/* Styling umum untuk container di halaman */
-.container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1.5rem; /* px-6 default Tailwind */
-    padding-right: 1.5rem; /* px-6 default Tailwind */
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width)* var(--quantity));
+    position: relative;
+}
+
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: slide 10s linear infinite;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) );
+}
+
+.slider .list .item img{
+    width: 100%;
+  
+}
+
+.slider:hover .item{
+    animation-play-state: paused;
+}
+
+@keyframes slide{
+    from{
+        left: 100%;
+    }
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+.visi{
+    background-image: url('../images/gojek.png');
+    height: 90vh;
+    background-size: contain;
+    background-repeat: no-repeat; /* Opsional: Agar tidak berulang jika contain */
+    background-position: center;
 }

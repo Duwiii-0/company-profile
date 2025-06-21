@@ -1,4 +1,4 @@
-<footer class="bg-gray-800 text-white flex flex-col text-center py-4 mt-10 pt-16" style="background: radial-gradient(circle at center 130%, #FF5F5F 30%, #993939 100%);">
+<footer class="bg-gray-800 text-white flex flex-col text-center py-4  pt-16" style="background: radial-gradient(circle at center 130%, #FF5F5F 30%, #993939 100%);">
     <div class="flex flex-row justify-center align-center">
         <div class="flex flex-col flex-1 items-start ml-23">
             <div class="text-xl pb-5">Logo</div>
