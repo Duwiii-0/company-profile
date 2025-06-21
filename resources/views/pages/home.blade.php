@@ -65,8 +65,8 @@
             <p class="text-gray-700 mb-4 text-center">At the core of our company lies a set of values that guide every action we take.<br> 
             These values shape our culture, inspire our people, and reflect the standards we uphold in every partnership</p>
         </div>
-        <div class="grid grid-cols-4 gap-10 mx-10">
-            <div class="flex flex-col items-center justify-center space-y-5">
+        <div class="grid grid-cols-4 gap-10 mx-10 items-start">
+            <div class="flex flex-col items-center justify-center space-y-5 ">
                 <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md shadow-white">
                     <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
                 </div>
@@ -75,7 +75,7 @@
                     Trust is built through accountability and ethical decision-making.
                 </p>
             </div>
-            <div class="flex flex-col items-center justify-center space-y-5">
+            <div class="flex flex-col items-center justify-center space-y-5 ">
                 <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md shadow-white">
                     <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
                 </div>
@@ -83,7 +83,7 @@
                 <p class=" text-center ">We listen, we care, and we are committed to creating value for those we serve
                 </p>
             </div>
-            <div class="flex flex-col items-center justify-center space-y-5">
+            <div class="flex flex-col items-center justify-center space-y-5 ">
                 <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md shadow-white">
                     <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
                 </div>
@@ -91,7 +91,7 @@
                 <p class=" text-center ">We believe in the power of teamwork — across departments, with partners, and with our clients — to create impactful outcomes.
                 </p>
             </div>
-            <div class="flex flex-col items-center justify-center space-y-5">
+            <div class="flex flex-col items-center justify-center space-y-5 ">
                 <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md shadow-white">
                     <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
                 </div>
