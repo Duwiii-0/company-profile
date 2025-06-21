@@ -8,8 +8,9 @@
 
     <section class="w-full h-[75vh] bg-gray-100 flex justify-center">
         <div class=" w-full flex flex-3/6 justify-center px-10 pl-20 items-center">
-            <div class="rounded-lg bg-white/50">
-            <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
+            <div class="rounded-lg bg-white/50 ">
+            <img src="{{ Vite::asset('resources/images/skdakds.png') }}" alt="foto class="w-full h-full object-contain rounded-lg">
+">
             </div>
         </div>
         <div class=" w-full flex flex-col ">
@@ -61,42 +62,42 @@
 
     <section class="py-16 bg-gray-50 visi space-y-10">
         <div class="flex flex-col items-center mt-10">
-            <h2 class="text-3xl font-bold mb-4 text-white text-shadow-glow">The Values We Honor</h2>
-            <p class="text-gray-700 mb-4 text-center">At the core of our company lies a set of values that guide every action we take.<br> 
+            <h2 class="text-3xl font-bold mb-4 text-white">The Values We Honor</h2>
+            <p class="text-white mb-4 text-center">At the core of our company lies a set of values that guide every action we take.<br> 
             These values shape our culture, inspire our people, and reflect the standards we uphold in every partnership</p>
         </div>
         <div class="grid grid-cols-4 gap-10 mx-10 items-start">
             <div class="flex flex-col items-center justify-center space-y-5 ">
-                <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md shadow-white">
-                    <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
+                <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl">
+                    <img src="{{ Vite::asset('resources/images/integrity.png') }}" alt="integrity">
                 </div>
-                <p class="mb-2 text-2xl">Integrity</p>
-                <p class=" text-center ">We act with honesty and transparency in everything we do. 
+                <p class="mb-2 text-2xl text-white">Integrity</p>
+                <p class=" text-center text-white">We act with honesty and transparency in everything we do. 
                     Trust is built through accountability and ethical decision-making.
                 </p>
             </div>
             <div class="flex flex-col items-center justify-center space-y-5 ">
-                <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md shadow-white">
+                <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md">
                     <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
                 </div>
-                <p class="mb-2 text-2xl">Customer Focus</p>
-                <p class=" text-center ">We listen, we care, and we are committed to creating value for those we serve
+                <p class="mb-2 text-2xl text-white">Customer Focus</p>
+                <p class=" text-center text-white">We listen, we care, and we are committed to creating value for those we serve
                 </p>
             </div>
             <div class="flex flex-col items-center justify-center space-y-5 ">
-                <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md shadow-white">
-                    <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
+                <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md">
+                    <img src="{{ Vite::asset('resources/images/communication.png') }}" alt="collaboration">
                 </div>
-                <p class="mb-2 text-2xl">Collaboration</p>
-                <p class=" text-center ">We believe in the power of teamwork — across departments, with partners, and with our clients — to create impactful outcomes.
+                <p class="mb-2 text-2xl text-white">Collaboration</p>
+                <p class=" text-center text-white">We believe in the power of teamwork across departments, with partners, and with our clients to create impactful outcomes.
                 </p>
             </div>
             <div class="flex flex-col items-center justify-center space-y-5 ">
-                <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md shadow-white">
-                    <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
+                <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md">
+                    <img src="{{ Vite::asset('resources/images/exelence.png') }}" alt="exellence">
                 </div>
-                <p class="mb-2 text-2xl">Excellence</p>
-                <p class=" text-center ">We strive to deliver the highest quality in our work, constantly seeking innovation and improvement.
+                <p class="mb-2 text-2xl text-white">Excellence</p>
+                <p class=" text-center text-white">We strive to deliver the highest quality in our work, constantly seeking innovation and improvement.
                 </p>
             </div>
         </div>

@@ -1,7 +1,9 @@
 <header class="bg-red-700 shadow-md fixed w-full top-0 z-50"> {{-- Pastikan warna ini --}}
     <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
         <div class="text-2xl font-bold text-white">
-            <a href="#home">Logo</a>
+            <a href="#home">
+                <img src="{{ Vite::asset('resources/images/Logo.png') }}" class="w-48 h-auto" alt="logo">
+            </a>
         </div>
         {{-- Pastikan ini ada: flex-grow dan justify-center pada ul --}}
         <ul class="flex-grow flex justify-center space-x-6 items-center">

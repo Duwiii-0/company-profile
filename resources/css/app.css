@@ -4,6 +4,10 @@ html {
     scroll-behavior: smooth; /* Ini penting untuk smooth scrolling */
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 /* Untuk efek glow pada teks H1 di hero section */
 .text-shadow-glow {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.7),
@@ -57,11 +61,15 @@ html {
 }
 
 .visi{
-    background-image: url('../images/gojek.png');
-    height: 90vh;
-    background-size: contain;
-    background-repeat: no-repeat; /* Opsional: Agar tidak berulang jika contain */
+    background-image: url('../images/dummy.png');
+    height: 100vh;
+    background-size: cover; /* Mengubah dari contain ke cover */
+    background-repeat: no-repeat;
     background-position: center;
+    width: 100vw; /* Memastikan lebar penuh viewport */
+    margin-left: calc(50% - 50vw); /* Mengatur posisi untuk keluar dari container */
+    margin-right: calc(50% - 50vw);
+
 }
 
 .testi-container{
