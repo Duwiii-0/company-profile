@@ -1,4 +1,4 @@
-<header class="bg-red-700 shadow-md fixed w-full top-0 z-50">
+<header class="bg-gradient-to-b from-black/50 to-transparent  fixed w-full top-0 z-50">
     <nav class="container mx-auto px-4 py-6 flex items-center relative">
         <!-- Logo Section - Fixed positioning -->
         <div class="text-2xl font-bold text-white absolute left-4">
@@ -11,25 +11,25 @@
         <ul class="flex space-x-12 items-center absolute left-1/2 transform -translate-x-1/2">
             <li>
                 <a href="#home"
-                    class="nav-link text-white hover:text-white transition-all duration-300 relative {{ request()->is('/') ? 'active' : '' }}">
+                    class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold {{ request()->is('/') ? 'active' : '' }}">
                     Home
                 </a>
             </li>
             <li>
                 <a href="#about"
-                    class="nav-link text-white hover:text-white transition-all duration-300 relative {{ request()->is('about') ? 'active' : '' }}">
+                    class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold {{ request()->is('about') ? 'active' : '' }}">
                     About
                 </a>
             </li>
             <li>
                 <a href="#services"
-                    class="nav-link text-white hover:text-white transition-all duration-300 relative {{ request()->is('services') ? 'active' : '' }}">
+                    class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold{{ request()->is('services') ? 'active' : '' }}">
                     Services
                 </a>
             </li>
             <li>
                 <a href="#projects"
-                    class="nav-link text-white hover:text-white transition-all duration-300 relative {{ request()->is('projects') ? 'active' : '' }}">
+                    class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold{{ request()->is('projects') ? 'active' : '' }}">
                     Projects
                 </a>
             </li>
@@ -37,7 +37,7 @@
 
         <!-- Contact Button - Fixed positioning -->
         <a href="{{ route('contact') }}" target="_blank"
-            class="text-red-700 bg-white px-6 py-2 rounded-full hover:bg-gray-100 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-sm font-semibold cursor-pointer absolute right-4">
+            class="text-red-700 bg-white px-6 py-2 rounded-full hover:bg-transparent hover:border-white hover:shadow-lg transition-all duration-300 text-sm font-semibold cursor-pointer absolute right-4">
             Contact Us
         </a>
     </nav>

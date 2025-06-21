@@ -12,7 +12,7 @@
         <div class="absolute inset-0 bg-white"></div>
 
         <!-- Red background area - diagonal cut -->
-        <div class="absolute top-0 right-0 w-1/5 h-full bg-gradient-to-br from-red-400 via-red-500 to-red-600"
+        <div class="absolute top-0 right-0 w-1/5 h-full bg-pink-700"
             style="clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);">
 
             <!-- Plus pattern di area merah -->
@@ -78,9 +78,9 @@
         </div>
 
         <!-- Right Side - About Content -->
-        <div class="w-1/2 h-full flex flex-col justify-center px-16 py-16 bg-white relative rounded-bl-[80px]">
+        <div class="w-full h-full flex flex-col justify-center px-16 py-16 bg-white relative rounded-bl-[80px]">
             <!-- Decorative corner element -->
-            <div class="absolute left-190 top-0 right-0 w-70 h-213 bg-red-500 rounded-bl-[100px]"></div>
+            <div class="absolute top-0 right-0 w-70 h-213 bg-red-500 rounded-bl-[100px]"></div>
 
             <div class="space-y-6 max-w-lg relative z-10">
                 <!-- About Us Heading -->
@@ -195,14 +195,14 @@
     </section>
 
     <section class="py-16 bg-gray-50 visi space-y-10">
-        <div class="flex flex-col items-center mt-10">
-            <h2 class="text-3xl font-bold mb-4 text-white">The Values We Honor</h2>
+        <div class="flex flex-col items-center mt-10 mb-20">
+            <h2 class="text-5xl font-bold mb-8 text-white">The Values We Honor</h2>
             <p class="text-white mb-4 text-center">At the core of our company lies a set of values that guide every action we take.<br> 
             These values shape our culture, inspire our people, and reflect the standards we uphold in every partnership</p>
         </div>
         <div class="grid grid-cols-4 gap-10 mx-10 items-start">
             <div class="flex flex-col items-center justify-center space-y-5 ">
-                <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl">
+                <div class="h-40 w-46 bg-white p-5 flex justify-center items-center rounded-xl">
                     <img src="{{ Vite::asset('resources/images/integrity.png') }}" alt="integrity">
                 </div>
                 <p class="mb-2 text-2xl text-white">Integrity</p>
@@ -211,15 +211,15 @@
                 </p>
             </div>
             <div class="flex flex-col items-center justify-center space-y-5 ">
-                <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md">
-                    <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1">
+                <div class="h-40 w-46 bg-white p-5 flex justify-center items-center rounded-xl shadow-md">
+                    <img src="{{ Vite::asset('resources/images/customer-focus.png') }}" alt="customer-focus">
                 </div>
                 <p class="mb-2 text-2xl text-white">Customer Focus</p>
                 <p class=" text-center text-white">We listen, we care, and we are committed to creating value for those we serve
                 </p>
             </div>
             <div class="flex flex-col items-center justify-center space-y-5 ">
-                <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md">
+                <div class="h-40 w-46 bg-white p-5 flex justify-center items-center rounded-xl shadow-md">
                     <img src="{{ Vite::asset('resources/images/communication.png') }}" alt="collaboration">
                 </div>
                 <p class="mb-2 text-2xl text-white">Collaboration</p>
@@ -227,7 +227,7 @@
                 </p>
             </div>
             <div class="flex flex-col items-center justify-center space-y-5 ">
-                <div class="h-40 w-46 bg-gray-200 p-5 flex justify-center items-center rounded-xl shadow-md">
+                <div class="h-40 w-46 bg-white p-5 flex justify-center items-center rounded-xl shadow-md">
                     <img src="{{ Vite::asset('resources/images/exelence.png') }}" alt="exellence">
                 </div>
                 <p class="mb-2 text-2xl text-white">Excellence</p>
@@ -238,7 +238,7 @@
     </section>
 
     <section id="testi" class="py-16 h-[90vh]">
-        <h2 class="text-3xl font-bold mb-4 text-black text-shadow-glow text-center">Experince Shared By<br>Our Clients</h2>
+        <h2 class="text-5xl font-bold mb-20 text-black text-shadow-glow text-center">Experince Shared By<br>Our Clients</h2>
         <x-card />
     </section>
 
