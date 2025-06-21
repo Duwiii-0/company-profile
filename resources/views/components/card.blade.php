@@ -1,9 +1,6 @@
-<section class="testi space-y-5 flex flex-row items-center justify-center space-x-5">
-    <button class="pre-btn w-10 h-10 rounded-full flex items-center justify-center pr-1">
-            <x-icons.left-arrow class="w-6 h-6"/>
-    </button>
-    <div class="testi-container space-x-5 w-[69vw]">
-        <div class="product-card bg-red-700/50 w-lg rounded-lg p-5 shrink-0 text-white">
+<section class="testi space-y-5 flex flex-col items-center justify-center space-x-5">
+    <div class="testi-container space-x-5 w-full">
+        <div class="product-card bg-red-700/50 w-lg rounded-lg p-5 shrink-0 ml-20 text-white">
                 <div class="flex flex-col space-y-3">
                     <h2 class="text-xl font-bold">Beyond Expectation!</h2>
                     <p>At the core of our company lies a set of values that guide every action we take.<br> 
@@ -142,7 +139,12 @@
         </div>
 
     </div>
+    <div class="flex">
+        <button class="pre-btn w-10 h-10 rounded-full flex items-center justify-center pr-1">
+                <x-icons.left-arrow class="w-6 h-6"/>
+        </button>
         <button class="nxt-btn w-10 h-10 rounded-full flex items-center justify-center pl-1">
             <x-icons.right-arrow-2 class="w-6 h-6" />
         </button>
+    </div>
 </section>

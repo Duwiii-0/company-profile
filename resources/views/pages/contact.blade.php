@@ -139,7 +139,7 @@
         }
     </style>
 
-    <div class="contact-container py-20 mt-8">
+    <div class="contact-container py-20">
         <!-- Decorative Elements -->
         <div class="decorative-dots dot-1"></div>
         <div class="decorative-dots dot-2"></div>
@@ -153,7 +153,7 @@
             style="bottom: 15%; left: 20%; width: 15px; height: 15px; background: rgba(236, 72, 153, 0.2); border-radius: 50%; animation-delay: -2s;">
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 content-wrapper">
+        <div class="max-w-7xl mx-auto px-6 content-wrapper mt-8">
             <div class="grid lg:grid-cols-2 gap-16 items-start">
 
                 <!-- Left Column - Contact Information -->

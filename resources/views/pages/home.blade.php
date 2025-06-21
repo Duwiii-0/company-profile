@@ -79,8 +79,6 @@
 
         <!-- Right Side - About Content -->
         <div class="w-full h-full flex flex-col justify-center px-16 py-16 bg-white relative rounded-bl-[80px]">
-            <!-- Decorative corner element -->
-            <div class="absolute top-0 right-0 w-70 h-213 bg-red-500 rounded-bl-[100px]"></div>
 
             <div class="space-y-6 max-w-lg relative z-10">
                 <!-- About Us Heading -->
@@ -119,6 +117,8 @@
                 </div>
             </div>
         </div>
+         <!-- Decorative corner element -->
+        <div class="w-70 h-full bg-red-500 rounded-bl-[100px]"></div>
     </section>
 
     <section class="w-full h-[75vh] bg-gray-100 flex justify-center">

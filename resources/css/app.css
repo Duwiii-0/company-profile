@@ -16,7 +16,6 @@ body::-webkit-scrollbar{
 
 .slider{
     width: 100%;
-    height: var(--height);
     overflow: hidden;
     mask-image: linear-gradient(
         to right,
