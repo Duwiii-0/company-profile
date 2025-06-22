@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{-- Tambahkan yield untuk title, dengan fallback 'Company Profile' --}}
     <title>Adipratama Kreatif Solusi - @yield('title', 'Company Profile')</title>
+    <link rel="icon" type="image/png" href="{{ Vite::asset('resources/images/Logo.png') }}">
 
     {{-- Link Google Fonts untuk Poppins dan Open Sans --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
