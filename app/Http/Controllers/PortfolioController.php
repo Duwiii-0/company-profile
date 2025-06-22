@@ -88,7 +88,16 @@ class PortfolioController extends Controller
         $filterTech = $request->get('tech');
         if ($filterTech && $filterTech !== 'all') {
             $portfolios = $portfolios->filter(function ($portfolio) use ($filterTech) {
-                return in_array(ucfirst($filterTech), $portfolio['technologies']);
+                // Create a mapping for proper case conversion
+                $techMapping = [
+                    'android' => 'Android',
+                    'ios' => 'iOS',           // This is the fix!
+                    'web' => 'Web',
+                    'androidtv' => 'AndroidTV'
+                ];
+                
+                $properTechName = $techMapping[strtolower($filterTech)] ?? ucfirst($filterTech);
+                return in_array($properTechName, $portfolio['technologies']);
             });
         }
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mx-auto px-6 py-12 lg:px-8">
+<div class="container mx-auto px-6 py-12 lg:px-8 mt-20">
     <!-- Header Section with enhanced animations -->
     <div class="mb-12 animate-slide-up">
         <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-50 via-white to-pink-50 p-8 lg:p-12">
@@ -24,7 +24,7 @@
 
     <!-- Filter Section with enhanced styling -->
     <div class="mb-12 animate-slide-up" style="animation-delay: 0.2s;">
-        <h2 class="text-2xl font-semibold mb-8 text-gray-800">See our works by</h2>
+        <h2 class="text-2xl font-semibold mb-8 text-white">See our works by</h2>
         
         <div class="flex flex-wrap items-center gap-6 mb-8 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
             <!-- Technology Filters -->
