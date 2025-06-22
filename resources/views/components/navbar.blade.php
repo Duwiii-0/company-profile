@@ -44,7 +44,6 @@
 </header>
 
 <style>
-    /* Ensure nav container has proper height for absolute positioning */
     nav {
         height: 70px;
     }

@@ -171,3 +171,98 @@ body::-webkit-scrollbar{
         .prose-invert h4 {
             color: #fbbf24;
         }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulseSubtle {
+
+            0%,
+            100% {
+                opacity: 0.2;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes bounceSlow {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-slide-in-right {
+            animation: slideInRight 1.2s ease-out forwards;
+        }
+
+        .animate-pulse-subtle {
+            animation: pulseSubtle 8s ease-in-out infinite;
+        }
+
+        .animate-bounce-slow {
+            animation: bounceSlow 4s ease-in-out infinite;
+        }
+
+        .animation-delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .animation-delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .animation-delay-500 {
+            animation-delay: 0.5s;
+        }
+
+        .animation-delay-700 {
+            animation-delay: 0.7s;
+        }
+
+        .animation-delay-800 {
+            animation-delay: 0.8s;
+        }
+
+        /* Enhanced hover effects */
+        .group:hover .animate-pulse-subtle {
+            animation-duration: 2s;
+        }
+
+        .shadow-3xl {
+            box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+        }

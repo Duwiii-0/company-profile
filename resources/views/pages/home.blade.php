@@ -6,60 +6,186 @@
 
     <x-hero />
 
-    <!-- Welcome Section - Simple dan sesuai Figma -->
-    <section class=" w-full min-h-screen flex">
+    <!-- Welcome Section - Enhanced dengan Animasi dan Hover Effects -->
+    <section class="w-full min-h-screen flex relative overflow-hidden">
         <!-- Content Container -->
 
-        <!-- Right Image Area -->
-        <div class="w-2/5 flex flex-col justify-center items-center mt-70 absolute right-40 px-8 z-100">
-            <!-- CEO Image Container -->
-            <div class="">
-                <div class="w-72 h-100 bg-gray-200 rounded-2xl shadow-xl overflow-hidden">
+        <!-- Right Image Area - Posisi diturunkan sedikit -->
+        <div
+            class="w-2/5 flex flex-col justify-center items-center mt-28 absolute right-40 px-8 z-10
+                                                                                                                                                                                                                    animate-slide-in-right">
+            <!-- CEO Image Container dengan Border/Effect -->
+            <div class="group relative">
+                <!-- Decorative border background -->
+                <div
+                    class="absolute -inset-3 bg-gradient-to-r from-red-500 via-red-600 to-red-700 rounded-3xl opacity-60 
+                                                                                                                                                                                                                            group-hover:opacity-90 transition-all duration-500 blur-md group-hover:blur-lg">
+                </div>
+
+                <!-- Secondary glow effect -->
+                <div
+                    class="absolute -inset-1 bg-gradient-to-r from-red-400 to-red-600 rounded-2xl opacity-30 
+                                                                                                                                                                                                                            group-hover:opacity-50 transition-opacity duration-300">
+                </div>
+
+                <div
+                    class="relative w-72 h-96 bg-white rounded-2xl shadow-2xl overflow-hidden
+                                                                                                                                                                                                                            transition-all duration-700 ease-out
+                                                                                                                                                                                                                            group-hover:shadow-3xl group-hover:scale-105 group-hover:-translate-y-3
+                                                                                                                                                                                                                            border-4 border-white group-hover:border-red-50">
+                    <!-- Subtle overlay on hover -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-white/10 
+                                                                                                                                                                                                                                   opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10">
+                    </div>
+
+                    <!-- Image shine effect -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent
+                                                                                                                                                                                                                                   translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 z-20">
+                    </div>
+
                     <img src="{{ Vite::asset('resources/images/Officeman.jpg') }}" alt="John Doe - CEO"
-                        class="w-full h-full object-cover">
+                        class="w-full h-full object-cover transition-transform duration-700 
+                                                                                                                                                                                                                        group-hover:scale-110 group-hover:brightness-110">
                 </div>
             </div>
-            <!-- CEO Info -->
-            <div>
-                <h3 class="text-2xl font-bold text-gray-800 mb-2">John Doe</h3>
-                <p class="text-gray-500 italic">Chief Executive Operations</p>
-            </div>
-        </div>
 
-        <div class=" z-20 flex min-h-screen w-full bg-gray-100">
-            <!-- Left Content Area -->
-            <div class="w-full flex items-center px-16 py-20 ml-48 ">
-                <div class="max-w-2xl">
-                    <h1 class="text-6xl font-bold text-gray-800 mb-8">Welcome</h1>
-
-                    <p class="text-gray-600 text-base leading-relaxed mb-6">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                        sint
-                        occaecat cupidatat ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat.
-                    </p>
-
-                    <p class="text-gray-600 text-base leading-relaxed mb-12">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Laboris nisi ut aliquip ex ea commodo consequat. Ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur.
+            <!-- CEO Info - Enhanced dengan gradient background -->
+            <div
+                class="mt-8 bg-gradient-to-r from-white via-gray-50 to-white rounded-xl shadow-xl 
+                                                                                                                                                                                                                px-8 py-6 w-80 h-24 flex items-center justify-center
+                                                                                                                                                                                                                border border-gray-100 hover:border-red-200 transition-all duration-300
+                                                                                                                                                                                                                hover:shadow-2xl hover:-translate-y-1">
+                <div class="text-center">
+                    <h3
+                        class="text-xl font-bold text-gray-800 mb-2 
+                                                                                                                                                                                                                               transition-all duration-300 hover:text-red-600 
+                                                                                                                                                                                                                               hover:scale-105 cursor-default">
+                        John
+                        Doe
+                    </h3>
+                    <p
+                        class="text-gray-500 italic text-sm transition-colors duration-300 
+                                                                                                                                                                                                                      hover:text-gray-700 font-medium">
+                        Chief
+                        Executive
+                        Operations
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- Red background area - diagonal cut -->
-        <div class="w-3/8 h-full" style="clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);">
+        <!-- Left Content Area - dengan rounded corner -->
+        <div
+            class="w-3/5 min-h-screen bg-gray-100 rounded-tr-3xl
+                                                                                                                                                                                                            relative flex items-center z-20">
 
-            <!-- Plus pattern di area merah -->
-            <div class="absolute inset-0 opacity-70"
-                style="background-image: url('data:image/svg+xml;utf8,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path d=&quot;M30 15V45M15 30H45&quot; stroke=&quot;white&quot; stroke-opacity=&quot;0.4&quot; stroke-width=&quot;1&quot;/></svg>'); background-size: 120px 60px;">
+            <!-- Top area decorations -->
+            <div class="absolute top-20 left-16 w-4 h-4 bg-red-300 rounded-full opacity-60 animate-pulse-subtle"></div>
+            <div class="absolute top-36 left-28 w-2 h-2 bg-red-400 rounded-full opacity-80 animate-bounce-slow"></div>
+            <div class="absolute top-52 left-12 w-5 h-5 bg-red-200 rounded-full opacity-50 animate-pulse-subtle"
+                style="animation-delay: 2s;"></div>
+            <div class="absolute top-72 left-36 w-3 h-3 bg-red-500 rounded-full opacity-70"></div>
+
+            <!-- Middle area decorations -->
+            <div class="absolute top-1/2 left-8 w-6 h-6 bg-red-100 rounded-full opacity-40 animate-pulse-subtle"
+                style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-32 w-2 h-2 bg-red-600 rounded-full opacity-90"></div>
+
+            <!-- Bottom area decorations -->
+            <div class="absolute bottom-48 left-20 w-5 h-5 bg-red-250 rounded-full opacity-40"></div>
+            <div class="absolute bottom-32 left-32 w-4 h-4 bg-red-350 rounded-full opacity-60 animate-pulse-subtle"
+                style="animation-delay: 4s;"></div>
+            <div class="absolute bottom-64 left-12 w-3 h-3 bg-red-400 rounded-full opacity-70"></div>
+
+            <!-- Right side floating elements -->
+
+            <!-- Enhanced gradient overlays untuk depth - mengikuti style kiri -->
+            <div class="absolute inset-0 bg-gradient-to-br from-white/30 via-transparent to-red-50/20 pointer-events-none">
+            </div>
+            <div
+                class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none">
+            </div>
+
+            <!-- Content Container -->
+            <div class="w-full flex items-center px-16 py-20 ml-48">
+                <div class="max-w-2xl relative">
+                    <!-- Enhanced Welcome Title dengan multiple effects -->
+                    <h1
+                        class="text-7xl font-bold text-gray-800 mb-8 
+                                                                                                                                                                                                                                   animate-fade-in-up
+                                                                                                                                                                                                                                   hover:text-transparent hover:bg-clip-text 
+                                                                                                                                                                                                                                   hover:bg-gradient-to-r hover:from-red-500 hover:via-red-600 hover:to-red-800
+                                                                                                                                                                                                                                   transition-all duration-700 cursor-default
+                                                                                                                                                                                                                                   relative group">
+                        Welcome
+                        <!-- Multiple underline animations -->
+                        <div
+                            class="absolute bottom-[-2] left-0 w-0 h-0.5 bg-gradient-to-r from-red-500 to-red-700
+                                                                                                                                                                                                                                        transition-all duration-700 group-hover:w-full">
+                        </div>
+                        <div class="absolute bottom-[-2] left-0 w-0 h-0.5 bg-red-300 opacity-50
+                                                                                                                                                                                                                                        transition-all duration-500 group-hover:w-3/4"
+                            style="animation-delay: 0.2s;"></div>
+                    </h1>
+
+                    <!-- Enhanced Paragraphs dengan better typography -->
+                    <div class="space-y-6 mb-12">
+                        <p
+                            class="text-gray-600 text-lg leading-relaxed
+                                                                                                                                                                                                                                          transition-all duration-300 hover:text-gray-700
+                                                                                                                                                                                                                                          animate-fade-in-up animation-delay-300">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur.
+                            Excepteur sint occaecat cupidatat ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+
+                        <p
+                            class="text-gray-600 text-lg leading-relaxed
+                                                                                                                                                                                                                                          transition-all duration-300 hover:text-gray-700
+                                                                                                                                                                                                                                          animate-fade-in-up animation-delay-500">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Laboris nisi ut aliquip ex ea commodo consequat. Ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+
+                    <!-- Enhanced decorative elements -->
+                    <div
+                        class="absolute -left-6 top-1/2 w-2 h-24 bg-gradient-to-b from-red-500 to-red-700 opacity-30 
+                                                                                                                                                                                                                                    animate-fade-in-up animation-delay-700 rounded-full">
+                    </div>
+
+                    <!-- Enhanced quote section -->
+                    <div class="relative animate-fade-in-up animation-delay-800">
+                        <div class="absolute -left-12 -top-6 text-8xl text-red-100 font-serif leading-none">"</div>
+                        <div
+                            class="backdrop-blur-sm rounded-xl p-6 border-l-4 border-gradient-to-b from-red-400 to-red-600 shadow-lg hover:shadow-xl transition-all duration-300 border border-red-100 hover:border-red-200">
+                            <p class="text-gray-700 italic text-base font-medium leading-relaxed">
+                                "Excellence is not a destination; it is a continuous journey that never ends."
+                            </p>
+                            <div class="mt-3 text-right">
+                                <span class="text-red-600 text-sm font-semibold">— Leadership Philosophy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- Right Red Background Area - Warna solid red-600 seperti original -->
+        <div class="w-2/7 min-h-screen relative overflow-hidden">
+
+            <!-- Pattern background dengan plus yang jelas - opacity original -->
+            <div class="absolute -top-9 left-1/2 right-0 h-[90%] bg-repeat opacity-65 rotate-180"
+                style="background-image: url('data:image/svg+xml;utf8,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path d=&quot;M30 15V45M15 30H45&quot; stroke=&quot;white&quot; stroke-opacity=&quot;0.6&quot; stroke-width=&quot;1.5&quot;/></svg>'); background-size: 80px 120px; background-position: 0 0;">
+            </div>
+        </div>
     </section>
 
     <!-- About Us Section -->
