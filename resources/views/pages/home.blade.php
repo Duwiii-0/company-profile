@@ -117,7 +117,7 @@
                 </div>
             </div>
         </div>
-         <!-- Decorative corner element -->
+        <!-- Decorative corner element -->
         <div class="w-70 h-full bg-red-500 rounded-bl-[100px]"></div>
     </section>
 
@@ -303,173 +303,6 @@
             </div>
         </div>
     </section>
-
-    {{-- Custom CSS for animations --}}
-    <style>
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-15px);
-            }
-        }
-
-        @keyframes pulse-slow {
-
-            0%,
-            100% {
-                opacity: 0.3;
-            }
-
-            50% {
-                opacity: 0.8;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .animate-pulse-slow {
-            animation: pulse-slow 4s ease-in-out infinite;
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        /* Custom shadow for featured card */
-        .shadow-3xl {
-            box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .container {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-        }
-    </style>
-
-    {{-- JavaScript for counter animation and interactions --}}
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Counter animation function
-            function animateCounter(element, target, suffix = '', duration = 800) {
-                let current = 0;
-                const increment = target / (duration / 16); // 60fps
-
-                // Clear any existing animation
-                if (element.animationTimer) {
-                    clearInterval(element.animationTimer);
-                }
-
-                element.animationTimer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(element.animationTimer);
-                    }
-                    element.textContent = Math.floor(current) + suffix;
-                }, 16);
-            }
-
-            // Reset counter function
-            function resetCounter(element, suffix = '') {
-                if (element.animationTimer) {
-                    clearInterval(element.animationTimer);
-                }
-                element.textContent = '0' + suffix;
-            }
-
-            // Get all counter elements
-            const counters = document.querySelectorAll('.counter');
-
-            // Add hover event listeners to each stat card
-            counters.forEach(counter => {
-                const statCard = counter.closest('.group');
-                const target = parseInt(counter.getAttribute('data-target'));
-                const suffix = counter.getAttribute('data-suffix') || '';
-
-                // Set initial state to 0
-                counter.textContent = '0' + suffix;
-
-                // Hover events
-                statCard.addEventListener('mouseenter', () => {
-                    animateCounter(counter, target, suffix, 600);
-
-                    // Animate progress bar
-                    const progressBar = statCard.querySelector('.h-full');
-                    if (progressBar) {
-                        progressBar.style.transform = 'scaleX(1)';
-                    }
-                });
-
-                statCard.addEventListener('mouseleave', () => {
-                    // Reset counter with smooth animation
-                    let current = target;
-                    const decrement = target / 30; // Faster reset
-
-                    if (counter.resetTimer) {
-                        clearInterval(counter.resetTimer);
-                    }
-
-                    counter.resetTimer = setInterval(() => {
-                        current -= decrement;
-                        if (current <= 0) {
-                            current = 0;
-                            clearInterval(counter.resetTimer);
-                        }
-                        counter.textContent = Math.floor(current) + suffix;
-                    }, 16);
-
-                    // Reset progress bar
-                    const progressBar = statCard.querySelector('.h-full');
-                    if (progressBar) {
-                        progressBar.style.transform = 'scaleX(0)';
-                    }
-                });
-            });
-
-            // Add staggered animation to stat cards on page load
-            const statCards = document.querySelectorAll('.grid > div');
-            statCards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
-                card.classList.add('animate-fade-in-up');
-            });
-
-            // Add pulse effect on hover for extra wow factor
-            counters.forEach(counter => {
-                const statCard = counter.closest('.group');
-
-                statCard.addEventListener('mouseenter', () => {
-                    counter.style.transform = 'scale(1.1)';
-                    counter.style.transition = 'transform 0.3s ease';
-                });
-
-                statCard.addEventListener('mouseleave', () => {
-                    counter.style.transform = 'scale(1)';
-                });
-            });
-        });
-    </script>
 
     <section id="services" class="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
         <!-- Background Elements -->
@@ -977,7 +810,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="clients" class="bg-gray-100 py-16">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold mb-8 text-center"> Our Clients</h2>

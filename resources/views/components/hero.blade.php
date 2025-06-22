@@ -9,7 +9,7 @@
 
         {{-- Plus pattern: Hanya di area atas --}}
         <div class="absolute top-0 left-22 right-0 w-[38%] rotate-180 h-2/5 bg-repeat opacity-65"
-            style="background-image: url('data:image/svg+xml;utf8,<svg width=&quot;80&quot; height=&quot;80&quot; viewBox=&quot;0 0 80 80&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path d=&quot;M40 20V60M20 40H60&quot; stroke=&quot;white&quot; stroke-opacity=&quot;0.5&quot; stroke-width=&quot;1&quot;/></svg>'); background-size: 80px 80px; background-position: 0 0;">
+            style="background-image: url('data:image/svg+xml;utf8,<svg width=&quot;80&quot; height=&quot;80&quot; viewBox=&quot;0 0 80 80&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path d=&quot;M40 20V60M20 40H60&quot; stroke=&quot;white&quot; stroke-opacity=&quot;0.5&quot; stroke-width=&quot;1&quot;/></svg>'); background-size: 80px 102px; background-position: 0 0;">
         </div>
     </div>
 
