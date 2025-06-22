@@ -77,6 +77,7 @@ body::-webkit-scrollbar{
     scroll-behavior: smooth;
     overflow-x: auto;
     flex-shrink: 0;
+    
 }
 
 .testi-container::-webkit-scrollbar{

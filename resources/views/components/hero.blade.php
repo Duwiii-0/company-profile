@@ -1,11 +1,7 @@
 <section id="home"
-    class="relative min-h-screen flex items-center justify-center text-white overflow-hidden bg-gradient-to-br from-red-700 via-red-600 to-pink-700 p-8">
+    class="relative min-h-screen flex items-center justify-center text-white overflow-hidden bg-transparent p-8">
     {{-- Plus Pattern Background --}}
     <div class="absolute inset-0 z-0">
-        {{-- Radial Gradient Overlay --}}
-        <div
-            class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-red-600/30 via-transparent to-red-800/30">
-        </div>
 
         {{-- Plus pattern: Hanya di area atas --}}
         <div class="absolute top-0 left-22 right-0 w-[38%] rotate-180 h-2/5 bg-repeat opacity-65"
