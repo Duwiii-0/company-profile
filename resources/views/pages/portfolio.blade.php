@@ -30,10 +30,10 @@
             <!-- Technology Filters -->
             <div class="flex flex-wrap gap-3">
                 @foreach($technologies as $tech)
-                    <a href="{{ request()->fullUrlWithQuery(['tech' => $tech]) }}" 
-                       class="group px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg
-                              {{ (request('tech', 'all') === $tech) 
-                                 ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25' 
+                    <button data-tech="{{ $tech }}" 
+                       class="tech-filter group px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg
+                              {{ ($filterTech ?? 'all') === $tech 
+                                 ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25 active' 
                                  : 'bg-gray-100 text-gray-700 hover:bg-gradient-to-r hover:from-purple-100 hover:to-pink-100 hover:text-purple-600' }}">
                         @if($tech === 'all')
                             <span class="flex items-center">
@@ -71,16 +71,16 @@
                                 AndroidTV
                             </span>
                         @endif
-                    </a>
+                    </button>
                 @endforeach
             </div>
 
             <!-- Category Filter -->
             <div class="ml-auto">
-                <select name="category" onchange="window.location.href = updateURLParameter(window.location.href, 'category', this.value)" 
+                <select id="category-filter" name="category" 
                         class="px-6 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 hover:shadow-md bg-white">
                     @foreach($categories as $value => $label)
-                        <option value="{{ $value }}" {{ request('category', 'all') === $value ? 'selected' : '' }}>
+                        <option value="{{ $value }}" {{ ($filterCategory ?? 'all') === $value ? 'selected' : '' }}>
                             {{ $label }}
                         </option>
                     @endforeach
@@ -88,40 +88,48 @@
             </div>
 
             <!-- Reset Button -->
-            <a href="{{ route('portfolio') }}" class="px-6 py-3 text-sm text-gray-600 hover:text-purple-600 transition-all duration-300 hover:scale-105 rounded-xl border border-gray-200 hover:border-purple-200 hover:bg-purple-50">
+            <button id="reset-filters" class="px-6 py-3 text-sm text-gray-600 hover:text-purple-600 transition-all duration-300 hover:scale-105 rounded-xl border border-gray-200 hover:border-purple-200 hover:bg-purple-50">
                 Reset
-            </a>
+            </button>
         </div>
     </div>
 
-    <!-- Portfolio Grid with staggered animations -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        @forelse($portfolios as $index => $portfolio)
-            <div class="animate-fade-in-up" style="animation-delay: {{ $index * 0.1 }}s;">
-                @include('components.portfoliocard', ['portfolio' => $portfolio])
+    <!-- Portfolio Grid Container with relative positioning for loading overlay -->
+    <div class="relative">
+        <!-- Loading overlay - now positioned relative to portfolio grid only -->
+        <div id="loading-overlay" class="absolute inset-0 mt-30 bg-white/90 backdrop-blur-[100px] z-10 flex items-center justify-center rounded-2xl">
             </div>
-        @empty
-            <div class="col-span-full text-center py-20 animate-fade-in">
-                <div class="relative">
-                    <!-- Animated background elements -->
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-32 h-32 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full animate-pulse opacity-50"></div>
-                    </div>
-                    <div class="relative z-10">
-                        <div class="text-gray-400 text-2xl mb-4 font-semibold">No projects found</div>
-                        <p class="text-gray-500 text-lg">Try adjusting your filters to see more results.</p>
-                        <div class="mt-6">
-                            <a href="{{ route('portfolio') }}" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></path>
-                                </svg>
-                                View All Projects
-                            </a>
+        </div>
+
+        <!-- Portfolio Grid with staggered animations -->
+        <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @forelse($portfolios as $index => $portfolio)
+                <div class="animate-fade-in-up" style="animation-delay: {{ $index * 0.1 }}s;">
+                    @include('components.portfoliocard', ['portfolio' => $portfolio])
+                </div>
+            @empty
+                <div class="col-span-full text-center py-20 animate-fade-in">
+                    <div class="relative">
+                        <!-- Animated background elements -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-32 h-32 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full animate-pulse opacity-50"></div>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="text-gray-400 text-2xl mb-4 font-semibold">No projects found</div>
+                            <p class="text-gray-500 text-lg">Try adjusting your filters to see more results.</p>
+                            <div class="mt-6">
+                                <button id="view-all-btn" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    View All Projects
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endforelse
+            @endforelse
+        </div>
     </div>
 </div>
 
@@ -215,7 +223,7 @@
     animation: gradient-shift 4s ease infinite;
 }
 
-/* Hover effects for portfolio cards (if not already styled) */
+/* Hover effects for portfolio cards */
 .portfolio-card {
     transition: all 0.3s ease;
 }
@@ -241,6 +249,25 @@
     animation: skeleton-loading 1.5s infinite;
 }
 
+/* Filter transition effects */
+.tech-filter.active {
+    background: linear-gradient(to right, #9333ea, #ec4899) !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.25);
+}
+
+.portfolio-fade-out {
+    opacity: 0.3;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.portfolio-fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
 /* Responsive improvements */
 @media (max-width: 768px) {
     .container {
@@ -251,45 +278,220 @@
 </style>
 
 <script>
-function updateURLParameter(url, param, paramVal) {
-    var newAdditionalURL = "";
-    var tempArray = url.split("?");
-    var baseURL = tempArray[0];
-    var additionalURL = tempArray[1];
-    var temp = "";
-    if (additionalURL) {
-        tempArray = additionalURL.split("&");
-        for (var i = 0; i < tempArray.length; i++) {
-            if (tempArray[i].split('=')[0] != param) {
-                newAdditionalURL += temp + tempArray[i];
-                temp = "&";
+document.addEventListener('DOMContentLoaded', function() {
+    let currentTech = '{{ $filterTech ?? "all" }}';
+    let currentCategory = '{{ $filterCategory ?? "all" }}';
+    
+    // Technology filter buttons
+    const techFilters = document.querySelectorAll('.tech-filter');
+    const categoryFilter = document.getElementById('category-filter');
+    const resetButton = document.getElementById('reset-filters');
+    const portfolioGrid = document.getElementById('portfolio-grid');
+    const loadingOverlay = document.getElementById('loading-overlay');
+    const viewAllBtn = document.getElementById('view-all-btn');
+
+    // Add CSRF token to all AJAX requests
+    const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+    
+    // Function to show loading state
+    function showLoading() {
+        loadingOverlay.classList.remove('hidden');
+        portfolioGrid.classList.add('portfolio-fade-out');
+    }
+    
+    // Function to hide loading state
+    function hideLoading() {
+        loadingOverlay.classList.add('hidden');
+        portfolioGrid.classList.remove('portfolio-fade-out');
+        portfolioGrid.classList.add('portfolio-fade-in');
+    }
+    
+    // Function to update filter button states
+    function updateFilterStates() {
+        techFilters.forEach(btn => {
+            const tech = btn.getAttribute('data-tech');
+            if (tech === currentTech) {
+                btn.classList.add('active');
+                btn.classList.remove('bg-gray-100', 'text-gray-700');
+                btn.classList.add('bg-gradient-to-r', 'from-purple-600', 'to-pink-600', 'text-white', 'shadow-lg', 'shadow-purple-500/25');
+            } else {
+                btn.classList.remove('active');
+                btn.classList.remove('bg-gradient-to-r', 'from-purple-600', 'to-pink-600', 'text-white', 'shadow-lg', 'shadow-purple-500/25');
+                btn.classList.add('bg-gray-100', 'text-gray-700');
             }
+        });
+        
+        categoryFilter.value = currentCategory;
+    }
+    
+    // Function to fetch filtered portfolios
+    async function fetchPortfolios() {
+        showLoading();
+        
+        try {
+            const params = new URLSearchParams();
+            if (currentTech !== 'all') params.append('tech', currentTech);
+            if (currentCategory !== 'all') params.append('category', currentCategory);
+            params.append('ajax', '1');
+            
+            const response = await fetch(`{{ url()->current() }}?${params.toString()}`, {
+                method: 'GET',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': csrfToken,
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            
+            const data = await response.json();
+            
+            // Update the portfolio grid with staggered animation
+            setTimeout(() => {
+                portfolioGrid.innerHTML = data.html;
+                
+                // Add staggered animations to new cards
+                const newCards = portfolioGrid.querySelectorAll('.animate-fade-in-up');
+                newCards.forEach((card, index) => {
+                    card.style.animationDelay = `${index * 0.1}s`;
+                });
+                
+                // Update URL without page refresh
+                const url = new URL(window.location);
+                if (currentTech === 'all') {
+                    url.searchParams.delete('tech');
+                } else {
+                    url.searchParams.set('tech', currentTech);
+                }
+                
+                if (currentCategory === 'all') {
+                    url.searchParams.delete('category');
+                } else {
+                    url.searchParams.set('category', currentCategory);
+                }
+                
+                window.history.pushState({}, '', url);
+                
+                hideLoading();
+                
+                // Re-observe new portfolio cards for scroll animations
+                observePortfolioCards();
+                
+                // Re-attach view all button event listener if it exists
+                const newViewAllBtn = document.getElementById('view-all-btn');
+                if (newViewAllBtn) {
+                    attachViewAllHandler(newViewAllBtn);
+                }
+                
+            }, 300);
+            
+        } catch (error) {
+            console.error('Error fetching portfolios:', error);
+            hideLoading();
+            
+            // Show error message
+            portfolioGrid.innerHTML = `
+                <div class="col-span-full text-center py-20">
+                    <div class="text-red-400 text-2xl mb-4 font-semibold">Error loading projects</div>
+                    <p class="text-gray-500 text-lg">Please try again later.</p>
+                    <button onclick="location.reload()" class="mt-4 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:shadow-lg transition-all duration-300">
+                        Refresh Page
+                    </button>
+                </div>
+            `;
         }
     }
     
-    var rows_txt = temp + "" + param + "=" + paramVal;
-    return baseURL + "?" + newAdditionalURL + rows_txt;
-}
-
-// Add scroll-triggered animations
-document.addEventListener('DOMContentLoaded', function() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in');
+    // Function to reset all filters
+    function resetAllFilters() {
+        currentTech = 'all';
+        currentCategory = 'all';
+        updateFilterStates();
+        fetchPortfolios();
+    }
+    
+    // Function to attach view all button handler
+    function attachViewAllHandler(button) {
+        if (button) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                resetAllFilters();
+            });
+        }
+    }
+    
+    // Technology filter click handlers
+    techFilters.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const tech = this.getAttribute('data-tech');
+            
+            if (currentTech !== tech) {
+                currentTech = tech;
+                updateFilterStates();
+                fetchPortfolios();
             }
         });
-    }, observerOptions);
-
-    // Observe all portfolio cards
-    document.querySelectorAll('.portfolio-card').forEach(card => {
-        observer.observe(card);
     });
+    
+    // Category filter change handler
+    categoryFilter.addEventListener('change', function() {
+        const category = this.value;
+        
+        if (currentCategory !== category) {
+            currentCategory = category;
+            fetchPortfolios();
+        }
+    });
+    
+    // Reset button handler
+    resetButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        if (currentTech !== 'all' || currentCategory !== 'all') {
+            resetAllFilters();
+        }
+    });
+    
+    // Initial view all button handler attachment
+    attachViewAllHandler(viewAllBtn);
+    
+    // Function to observe portfolio cards for scroll animations
+    function observePortfolioCards() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all portfolio cards
+        document.querySelectorAll('.portfolio-card').forEach(card => {
+            observer.observe(card);
+        });
+    }
+    
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', function(event) {
+        const urlParams = new URLSearchParams(window.location.search);
+        currentTech = urlParams.get('tech') || 'all';
+        currentCategory = urlParams.get('category') || 'all';
+        updateFilterStates();
+        fetchPortfolios();
+    });
+    
+    // Initial setup
+    updateFilterStates();
+    observePortfolioCards();
 });
 </script>
 @endsection

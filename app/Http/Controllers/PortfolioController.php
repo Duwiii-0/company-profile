@@ -122,6 +122,50 @@ class PortfolioController extends Controller
             'technology' => 'Technology'
         ];
 
+
+        // If this is an AJAX request, return only the portfolio cards HTML
+        if ($request->ajax() || $request->get('ajax')) {
+            $html = '';
+            
+            if ($portfolios->count() > 0) {
+                foreach ($portfolios as $index => $portfolio) {
+                    $delay = $index * 0.1;
+                    $cardHtml = view('components.portfoliocard', ['portfolio' => $portfolio])->render();
+                    // Wrap each card with animation div
+                    $html .= '<div class="animate-fade-in-up" style="animation-delay: ' . $delay . 's;">' . $cardHtml . '</div>';
+                }
+            } else {
+                // Empty state HTML
+                $html = '
+                    <div class="col-span-full text-center py-20 animate-fade-in">
+                        <div class="relative">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-32 h-32 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full animate-pulse opacity-50"></div>
+                            </div>
+                            <div class="relative z-10">
+                                <div class="text-gray-400 text-2xl mb-4 font-semibold">No projects found</div>
+                                <p class="text-gray-500 text-lg">Try adjusting your filters to see more results.</p>
+                                <div class="mt-6">
+                                    <button id="view-all-btn" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        View All Projects
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ';
+            }
+
+            return response()->json([
+                'html' => $html,
+                'count' => $portfolios->count()
+            ]);
+        }
+
+        // For regular page loads, return the full view
         return view('pages.portfolio', compact('portfolios', 'technologies', 'categories', 'filterTech', 'filterCategory'));
     }
 
