@@ -10,25 +10,25 @@
         <!-- Navigation Menu - Absolutely Centered -->
         <ul class="flex space-x-12 items-center absolute left-1/2 transform -translate-x-1/2">
             <li>
-                <a href="#home"
+                <a href="{{ route('home') }}#home"
                     class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold {{ request()->is('/') ? 'active' : '' }}">
                     Home
                 </a>
             </li>
             <li>
-                <a href="#about"
+                <a href="{{ route('home') }}#about"
                     class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold {{ request()->is('about') ? 'active' : '' }}">
                     About
                 </a>
             </li>
             <li>
-                <a href="#services"
+                <a href="{{ route('home') }}#services"
                     class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold {{ request()->is('services') ? 'active' : '' }}">
                     Services
                 </a>
             </li>
             <li>
-                <a href="#projects"
+                <a href="{{ route('home') }}#projects"
                     class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold {{ request()->is('projects') ? 'active' : '' }}">
                     Projects
                 </a>
