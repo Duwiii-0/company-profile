@@ -11,20 +11,20 @@
         <!-- Content Container -->
 
         <!-- Right Image Area -->
-            <div class="w-2/5 flex flex-col justify-center items-center mt-70 absolute right-40 px-8 z-100">
-                <!-- CEO Image Container -->
-                <div class="">
-                    <div class="w-72 h-100 bg-gray-200 rounded-2xl shadow-xl overflow-hidden">
-                        <img src="{{ Vite::asset('resources/images/Officeman.jpg') }}" alt="John Doe - CEO"
-                            class="w-full h-full object-cover">
-                    </div>
-                </div>
-                <!-- CEO Info -->
-                <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2">John Doe</h3>
-                    <p class="text-gray-500 italic">Chief Executive Operations</p>
+        <div class="w-2/5 flex flex-col justify-center items-center mt-70 absolute right-40 px-8 z-100">
+            <!-- CEO Image Container -->
+            <div class="">
+                <div class="w-72 h-100 bg-gray-200 rounded-2xl shadow-xl overflow-hidden">
+                    <img src="{{ Vite::asset('resources/images/Officeman.jpg') }}" alt="John Doe - CEO"
+                        class="w-full h-full object-cover">
                 </div>
             </div>
+            <!-- CEO Info -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">John Doe</h3>
+                <p class="text-gray-500 italic">Chief Executive Operations</p>
+            </div>
+        </div>
 
         <div class=" z-20 flex min-h-screen w-full bg-gray-100">
             <!-- Left Content Area -->
@@ -52,8 +52,7 @@
         </div>
 
         <!-- Red background area - diagonal cut -->
-        <div class="w-3/8 h-full"
-            style="clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);">
+        <div class="w-3/8 h-full" style="clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);">
 
             <!-- Plus pattern di area merah -->
             <div class="absolute inset-0 opacity-70"
@@ -666,11 +665,11 @@
             <div class="text-center mb-20">
                 <div class="inline-block mb-6">
                     <h2 class="text-7xl md:text-8xl font-black mb-8 leading-tight">
-                        <span class="bg-gradient-to-r from-white via-red-200 to-rose-200 bg-clip-text text-transparent">
+                        <span class="bg-white bg-clip-text text-transparent">
                             The Values
                         </span>
                         <br>
-                        <span class="bg-gradient-to-r from-red-300 via-rose-300 to-white bg-clip-text text-transparent">
+                        <span class="bg-white bg-clip-text text-transparent">
                             We Honor
                         </span>
                     </h2>
@@ -678,9 +677,9 @@
                     <!-- Decorative line with animation -->
                     <div class="flex justify-center items-center space-x-4 mb-8">
                         <div class="w-12 h-px bg-gradient-to-r from-transparent to-red-400"></div>
-                        <div class="w-8 h-8 bg-gradient-to-r from-red-500 to-rose-500 rounded-full animate-pulse"></div>
+                        <div class="w-4 h-4 bg-gradient-to-r from-red-500 to-rose-500 rounded-full animate-pulse"></div>
                         <div class="w-24 h-px bg-gradient-to-r from-red-400 to-rose-400"></div>
-                        <div class="w-8 h-8 bg-gradient-to-r from-rose-500 to-red-500 rounded-full animate-pulse delay-300">
+                        <div class="w-4 h-4 bg-gradient-to-r from-rose-500 to-red-500 rounded-full animate-pulse delay-300">
                         </div>
                         <div class="w-12 h-px bg-gradient-to-r from-rose-400 to-transparent"></div>
                     </div>
