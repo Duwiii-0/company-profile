@@ -7,29 +7,28 @@
     <x-hero />
 
     <!-- Welcome Section - Simple dan sesuai Figma -->
-    <section class="relative w-full min-h-screen">
-        <!-- Background utama putih -->
-        <div class="absolute inset-0 bg-white"></div>
-
-        <!-- Red background area - diagonal cut -->
-        <div class="absolute top-0 right-0 w-1/5 h-full bg-pink-700"
-            style="clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);">
-
-            <!-- Plus pattern di area merah -->
-            <div class="absolute inset-0 opacity-70"
-                style="background-image: url('data:image/svg+xml;utf8,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path d=&quot;M30 15V45M15 30H45&quot; stroke=&quot;white&quot; stroke-opacity=&quot;0.4&quot; stroke-width=&quot;1&quot;/></svg>'); background-size: 120px 60px;">
-            </div>
-        </div>
-
-        <div>
-            <div class="absolute -top-2 -left-1.5 w-3 h-3 bg-red-400 rotate-45"></div>
-            <div class="absolute bottom-0 -left-1 w-2 h-2 bg-red-400 rotate-45"></div>
-        </div>
-
+    <section class=" w-full min-h-screen flex">
         <!-- Content Container -->
-        <div class="relative z-20 flex min-h-screen">
+
+        <!-- Right Image Area -->
+            <div class="w-2/5 flex flex-col justify-center items-center mt-70 absolute right-40 px-8 z-100">
+                <!-- CEO Image Container -->
+                <div class="">
+                    <div class="w-72 h-100 bg-gray-200 rounded-2xl shadow-xl overflow-hidden">
+                        <img src="{{ Vite::asset('resources/images/Officeman.jpg') }}" alt="John Doe - CEO"
+                            class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <!-- CEO Info -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">John Doe</h3>
+                    <p class="text-gray-500 italic">Chief Executive Operations</p>
+                </div>
+            </div>
+
+        <div class=" z-20 flex min-h-screen w-full bg-gray-100">
             <!-- Left Content Area -->
-            <div class="w-3/5 flex items-center px-16 py-20">
+            <div class="w-full flex items-center px-16 py-20 ml-48 ">
                 <div class="max-w-2xl">
                     <h1 class="text-6xl font-bold text-gray-800 mb-8">Welcome</h1>
 
@@ -48,37 +47,31 @@
                         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                         cillum dolore eu fugiat nulla pariatur.
                     </p>
-
-                    <!-- CEO Info -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-2">John Doe</h3>
-                        <p class="text-gray-500 italic">Chief Executive Operations</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Image Area -->
-            <div class="w-2/5 flex justify-center items-center relative px-8">
-                <!-- CEO Image Container -->
-                <div class="relative z-30">
-                    <div class="w-72 h-100 bg-gray-200 rounded-2xl shadow-xl overflow-hidden">
-                        <img src="{{ Vite::asset('resources/images/Officeman.jpg') }}" alt="John Doe - CEO"
-                            class="w-full h-full object-cover">
-                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Red background area - diagonal cut -->
+        <div class="w-3/8 h-full"
+            style="clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);">
+
+            <!-- Plus pattern di area merah -->
+            <div class="absolute inset-0 opacity-70"
+                style="background-image: url('data:image/svg+xml;utf8,<svg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><path d=&quot;M30 15V45M15 30H45&quot; stroke=&quot;white&quot; stroke-opacity=&quot;0.4&quot; stroke-width=&quot;1&quot;/></svg>'); background-size: 120px 60px;">
+            </div>
+        </div>
+
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="w-full h-screen bg-white flex">
+    <section id="about" class="w-full h-screen flex">
         <!-- Left Side - Office Image -->
         <div class="w-2/5 h-full">
             <img src="{{ Vite::asset('resources/images/Office.jpg') }}" alt="Our Office" class="w-full h-full object-cover">
         </div>
 
         <!-- Right Side - About Content -->
-        <div class="w-full h-full flex flex-col justify-center px-16 py-16 bg-white relative rounded-bl-[80px]">
+        <div class="w-full h-full flex flex-col justify-center px-16 py-16 bg-gray-100 relative">
 
             <div class="space-y-6 max-w-lg relative z-10">
                 <!-- About Us Heading -->
@@ -118,11 +111,11 @@
             </div>
         </div>
         <!-- Decorative corner element -->
-        <div class="w-70 h-full bg-red-500 rounded-bl-[100px]"></div>
+        <div class="w-70 h-full rounded-bl-full"></div>
     </section>
 
     {{-- Hero Section with Red Theme --}}
-    <section class="w-full min-h-screen bg-gray-50 relative overflow-hidden">
+    <section class="w-full min-h-screen bg-gray-100 relative overflow-hidden">
         {{-- Background Pattern --}}
         <div class="absolute inset-0 opacity-5">
             <div class="absolute top-10 left-10 w-32 h-32 bg-red-500 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -304,7 +297,7 @@
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
+    <section id="services" class="py-20 bg-gray-100 relative overflow-hidden">
         <!-- Background Elements -->
         <div
             class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-red-100/30 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2">
@@ -886,7 +879,7 @@
     </section>
 
 
-    <section id="testi" class="py-16 h-[90vh]">
+    <section id="testi" class="py-16 h-[90vh] bg-gray-100">
         <h2 class="text-5xl font-bold mb-20 text-black text-shadow-glow text-center">Experince Shared By<br>Our Clients</h2>
         <x-card />
     </section>

@@ -24,7 +24,7 @@
 </head>
 {{-- Terapkan font Poppins secara global sebagai default font --}}
 
-<body class="font-poppins antialiased">
+<body class="font-poppins antialiased bg-gradient-to-br from-red-700 via-red-600 to-pink-700">
 
     {{-- Sertakan Navbar dari komponen --}}
     @include('components.navbar')
