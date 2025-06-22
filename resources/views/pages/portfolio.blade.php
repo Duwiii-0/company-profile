@@ -130,6 +130,13 @@
                 </div>
             @endforelse
         </div>
+        @if ($portfolios->hasPages())
+        <div class="mt-12 flex justify-center">
+            <nav class="inline-flex rounded-md shadow-sm" role="navigation" aria-label="Pagination">
+                {{ $portfolios->withQueryString()->links('pagination::tailwind') }}
+            </nav>
+        </div>
+        @endif
     </div>
 </div>
 
