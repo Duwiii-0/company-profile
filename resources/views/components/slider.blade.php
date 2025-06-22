@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="item relative group overflow-hidden rounded-lg shadow-2xl border-t-3 border-l-3 border-white bg-gradient-to-tl from-gray-300 to-gray-100 flex justify-center items-center" style="--position: 5">
-            <img src="{{ Vite::asset('resources/images/roblox.png') }}" alt="Client 5" class=" p-5 rounded-lg object-cover">
+            <img src="{{ Vite::asset('resources/images/roblox.png') }}" alt="Client 5" class=" p-8 rounded-lg object-cover">
             <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 group-hover:backdrop-blur flex items-center justify-center transition-opacity duration-200 rounded-lg text-gray-100 font-semibold text-lg">
             Roblox
             </div>

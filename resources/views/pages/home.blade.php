@@ -814,7 +814,7 @@
                 <p class="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed">
                     At the core of our company lies a set of values that guide every action we take.
                     <br class="hidden md:block">
-                    <span class="text-red-200 font-medium">
+                    <span class="text-gray-300 font-medium">
                         These values shape our culture, inspire our people, and reflect the standards we uphold in every
                         partnership.
                     </span>

@@ -2,26 +2,22 @@
 
 @section('content')
     {{-- About Us Section --}}
-    <section id="about" class="relative bg-gradient-to-br from-red-700 via-red-600 to-red-800 text-white overflow-hidden">
-        {{-- Background Pattern --}}
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-radial from-red-600/20 via-transparent to-red-800/40"></div>
-            <div class="absolute top-0 left-0 right-0 h-full bg-repeat opacity-20 pattern-bg"></div>
-        </div>
+    <section id="about" class="relative  bg-gray-100 overflow-hidden">
 
-        <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
+        <div class="">
             {{-- Hero Section --}}
-            <div class="pt-20 pb-16 text-center">
+            <div class="relative pb-16 bg-red-700 pt-50 mx-auto pl-70 px-0 w-screen">
                 <h1
-                    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-shadow-glow leading-none tracking-tight">
-                    Tentang
-                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-400">
-                        Kami
-                    </span>
+                    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-shadow-glow text-white leading-none tracking-tight">
+                    About Us
                 </h1>
-                <p class="text-lg sm:text-xl md:text-2xl font-light text-red-100 max-w-4xl mx-auto leading-relaxed mb-12">
+                <p class="text-lg sm:text-xl md:text-2xl text-white text-opacity-90 font-medium max-w-4xl leading-relaxed mb-12">
                     Adipratama Kreatif Solusi - Mewujudkan Visi Digital Anda
                 </p>
+                <div class="w-[45vw] h-auto overflow-hidden absolute -right-20 -top-30">
+                        <img src="{{ Vite::asset('resources/images/logonlyw.png') }}" alt="logo"
+                            class="w-full h-full object-cover opacity-20">
+                </div>
             </div>
 
             {{-- Main Story Section --}}
@@ -49,216 +45,230 @@
             {{-- Team Section --}}
             <div class="max-w-7xl mx-auto mb-20">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-yellow-300">Tim Kami</h2>
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-yellow-300">Meet Our Team</h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto mb-6"></div>
-                    <p class="text-lg text-red-100 max-w-3xl mx-auto">
+                    <p class="text-lg text-gray-400 max-w-3xl mx-auto">
                         Bersama sebagai software engineer dan berkembang sebagai entrepreneur visioner yang berkomitmen
                         untuk memberikan dampak positif pada bisnis melalui solusi software yang inovatif dan berkelanjutan.
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="grid md:grid-cols-2 max-w-4xl h-96 lg:grid-cols-3 gap-8 mx-auto mb-12">
                     {{-- Team Member 1 --}}
-                    <div
-                        class="bg-white/10 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-                        <div class="relative">
-                            <div
-                                class="aspect-square bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                                <div
-                                    class="w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-red-900" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                    <div class="flex flex-col h-96 w-64">
+                        <div
+                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center overflow-hidden flex flex-row flex-2/3 items-end justify-end"
+                            style="background-image: url('{{ Vite::asset('resources/images/profile4.png') }}');">
+                            <div class="flex flex-col p-2 rounded-tl-lg bg-gray-100 space-y-6">
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://linkedin.com/company/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.linkedinA class="w-3 h-3 " />
+                                    </a>
+                                </div>
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.XA class="w-3 h-3" />
+                                    </a>
+                                </div>
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.facebookA class="w-3 h-3"/>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
-                            </div>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Taufan Arfianto</h3>
-                            <div class="border-l-4 border-yellow-400 pl-4 space-y-1">
-                                <p class="text-yellow-300 font-semibold">CEO & Founder of AKS</p>
-                                <p class="text-red-100 text-sm">Director of AKS Group</p>
-                            </div>
+                        <div class="pl-3 pt-2">
+                            <h3 class="text-xl font-bold border-red-700">Sarah Lestari</h3>
+                            <p class="text-sm text-gray-500 font-semibold">UI/UX Design Lead</p>
                         </div>
                     </div>
 
                     {{-- Team Member 2 --}}
-                    <div
-                        class="bg-white/10 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-                        <div class="relative">
-                            <div
-                                class="aspect-square bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                                <div
-                                    class="w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-red-900" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                    <div class="flex flex-col h-96 w-64">
+                        <div
+                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center overflow-hidden flex flex-row flex-2/3 items-end justify-end"
+                            style="background-image: url('{{ Vite::asset('resources/images/profile4.png') }}');">
+                            <div class="flex flex-col p-2 rounded-tl-lg bg-gray-100 space-y-6">
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://linkedin.com/company/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.linkedinA class="w-3 h-3 " />
+                                    </a>
+                                </div>
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.XA class="w-3 h-3" />
+                                    </a>
+                                </div>
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.facebookA class="w-3 h-3"/>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
-                            </div>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Sidiq Permana</h3>
-                            <div class="border-l-4 border-yellow-400 pl-4 space-y-1">
-                                <p class="text-yellow-300 font-semibold">CTO & Co-Founder of AKS</p>
-                                <p class="text-red-100 text-sm">Google Developer Expert in Android</p>
-                            </div>
+                        <div class="pl-3 pt-2">
+                            <h3 class="text-xl font-bold border-red-700">Sarah Lestari</h3>
+                            <p class="text-sm text-gray-500 font-semibold">UI/UX Design Lead</p>
                         </div>
                     </div>
 
                     {{-- Team Member 3 --}}
-                    <div
-                        class="bg-white/10 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-                        <div class="relative">
-                            <div
-                                class="aspect-square bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                                <div
-                                    class="w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-red-900" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                    <div class="flex flex-col h-96 w-64">
+                        <div
+                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center overflow-hidden flex flex-row flex-2/3 items-end justify-end"
+                            style="background-image: url('{{ Vite::asset('resources/images/profile4.png') }}');">
+                            <div class="flex flex-col p-2 rounded-tl-lg bg-gray-100 space-y-6">
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://linkedin.com/company/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.linkedinA class="w-3 h-3 " />
+                                    </a>
+                                </div>
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.XA class="w-3 h-3" />
+                                    </a>
+                                </div>
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.facebookA class="w-3 h-3"/>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
-                            </div>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Ghiyats Hanif I</h3>
-                            <div class="border-l-4 border-yellow-400 pl-4 space-y-1">
-                                <p class="text-yellow-300 font-semibold">VP Mobile Engineer of AKS</p>
-                                <p class="text-red-100 text-sm">Senior Mobile Developer</p>
-                            </div>
+                        <div class="pl-3 pt-2">
+                            <h3 class="text-xl font-bold border-red-700">Sarah Lestari</h3>
+                            <p class="text-sm text-gray-500 font-semibold">UI/UX Design Lead</p>
                         </div>
                     </div>
                 </div>
 
                 {{-- Additional Team Members Row --}}
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 h-96 max-w-2xl mx-auto justify-items-center">
                     {{-- Team Member 4 --}}
-                    <div
-                        class="bg-white/10 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-                        <div class="relative">
-                            <div
-                                class="aspect-square bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                                <div
-                                    class="w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-red-900" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                    <div class="flex flex-col h-96 w-64">
+                        <div
+                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center overflow-hidden flex flex-row flex-2/3 items-end justify-end"
+                            style="background-image: url('{{ Vite::asset('resources/images/profile4.png') }}');">
+                            <div class="flex flex-col p-2 rounded-tl-lg bg-gray-100 space-y-6">
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://linkedin.com/company/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.linkedinA class="w-3 h-3 " />
+                                    </a>
+                                </div>
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.XA class="w-3 h-3" />
+                                    </a>
+                                </div>
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.facebookA class="w-3 h-3"/>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
-                            </div>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Ahmad Rizki</h3>
-                            <div class="border-l-4 border-yellow-400 pl-4 space-y-1">
-                                <p class="text-yellow-300 font-semibold">Lead Backend Developer</p>
-                                <p class="text-red-100 text-sm">Full Stack Developer</p>
-                            </div>
+                        <div class="pl-3 pt-2">
+                            <h3 class="text-xl font-bold border-red-700">Sarah Lestari</h3>
+                            <p class="text-sm text-gray-500 font-semibold">UI/UX Design Lead</p>
                         </div>
                     </div>
-
                     {{-- Team Member 5 --}}
-                    <div
-                        class="bg-white/10 backdrop-blur-lg rounded-3xl overflow-hidden border border-white/20 shadow-2xl hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-                        <div class="relative">
-                            <div
-                                class="aspect-square bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-                                <div
-                                    class="w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                                    <svg class="w-16 h-16 text-red-900" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                            clip-rule="evenodd" />
-                                    </svg>
+                    <div class="flex flex-col h-96 w-64">
+                        <div
+                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center overflow-hidden flex flex-row flex-2/3 items-end justify-end"
+                            style="background-image: url('{{ Vite::asset('resources/images/profile4.png') }}');">
+                            <div class="flex flex-col p-2 rounded-tl-lg bg-gray-100 space-y-6">
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://linkedin.com/company/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.linkedinA class="w-3 h-3 " />
+                                    </a>
+                                </div>
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.XA class="w-3 h-3" />
+                                    </a>
+                                </div>
+                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                        <x-icons.facebookA class="w-3 h-3"/>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
-                            </div>
                         </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Sarah Lestari</h3>
-                            <div class="border-l-4 border-yellow-400 pl-4 space-y-1">
-                                <p class="text-yellow-300 font-semibold">UI/UX Design Lead</p>
-                                <p class="text-red-100 text-sm">Creative Director</p>
-                            </div>
+                        <div class="pl-3 pt-2">
+                            <h3 class="text-xl font-bold border-red-700">Sarah Lestari</h3>
+                            <p class="text-sm text-gray-500 font-semibold">UI/UX Design Lead</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             {{-- Our Services Section --}}
-            <div class="max-w-7xl mx-auto mb-20">
+            <div class="max-w-5xl h-auto mx-auto mb-20">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-yellow-300">Layanan Kami</h2>
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-yellow-300">Who Trusted Us</h2>
                     <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto mb-6"></div>
                     <p class="text-lg text-red-100 max-w-2xl mx-auto">
                         Solusi komprehensif untuk transformasi digital bisnis Anda
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div
-                        class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-                        <div
-                            class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl mb-6 flex items-center justify-center">
-                            <svg class="w-8 h-8 text-red-900" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Pengembangan Web</h3>
-                        <p class="text-red-100 text-sm leading-relaxed">Website modern, responsif, dan user-friendly untuk
-                            meningkatkan presence digital Anda</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-x-20 gap-y-5">
+                    <div class="flex justify-center items-center">
+                        <img src="{{ Vite::asset('resources/images/playstation.png') }}" alt="Client 4" class=" p-5 rounded-lg object-cover">
                     </div>
-
-                    <div
-                        class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-                        <div
-                            class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl mb-6 flex items-center justify-center">
-                            <svg class="w-8 h-8 text-red-900" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Aplikasi Mobile</h3>
-                        <p class="text-red-100 text-sm leading-relaxed">Aplikasi iOS dan Android yang powerful dan
-                            user-centric untuk menjangkau audience mobile</p>
+                    <div class="flex justify-center items-center">
+                        <img src="{{ Vite::asset('resources/images/gojek.png') }}" alt="Client 1" class=" p-5 rounded-lg object-cover ">
                     </div>
-
-                    <div
-                        class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-                        <div
-                            class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl mb-6 flex items-center justify-center">
-                            <svg class="w-8 h-8 text-red-900" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Digital Marketing</h3>
-                        <p class="text-red-100 text-sm leading-relaxed">Strategi pemasaran digital yang efektif untuk
-                            meningkatkan brand awareness dan konversi</p>
+                    <div class="flex justify-center items-center">
+                    <img src="{{ Vite::asset('resources/images/google.png') }}" alt="Client 2" class=" p-10 rounded-lg object-cover">
                     </div>
-
-                    <div
-                        class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-xl hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
-                        <div
-                            class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl mb-6 flex items-center justify-center">
-                            <svg class="w-8 h-8 text-red-900" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Konsultasi IT</h3>
-                        <p class="text-red-100 text-sm leading-relaxed">Solusi teknologi komprehensif dan konsultasi
-                            strategis untuk pertumbuhan bisnis Anda</p>
+                    <div class="flex justify-center items-center">
+                    <img src="{{ Vite::asset('resources/images/meta.png') }}" alt="Client 3" class=" p-5 rounded-lg object-cover">
+                    </div>
+                    <div class="flex justify-center items-center">
+                    <img src="{{ Vite::asset('resources/images/kawasaki.png') }}" alt="Client 4" class=" p-5 rounded-lg object-cover">
+                    </div>
+                    <div class="flex justify-center items-center">
+                    <img src="{{ Vite::asset('resources/images/roblox.png') }}" alt="Client 5" class=" p-8 rounded-lg object-cover">
+                    </div>
+                    <div class="flex justify-center items-center">
+                    <img src="{{ Vite::asset('resources/images/spotify.png') }}" alt="Client 6" class=" p-5 rounded-lg object-cover flex justify-center items-center">
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <img src="{{ Vite::asset('resources/images/brave.png') }}" alt="Client 7" class=" p-5 rounded-lg object-cover">
+                    </div>
+                    <div class="flex justify-center items-center">
+                    <img src="{{ Vite::asset('resources/images/cars.png') }}" alt="Client 8" class=" p-5 rounded-lg object-cover">
+                    </div>
+                    <div class="flex justify-center items-center">
+                    <img src="{{ Vite::asset('resources/images/under_armour.png') }}" alt="Client 9" class=" p-5 rounded-lg object-cover">
+                    </div>
+                    <div class="flex justify-center items-center">
+                    <img src="{{ Vite::asset('resources/images/lenovo.png') }}" alt="Client 10" class=" p-5 rounded-lg object-cover">
+                    </div>
+                    <div class="flex justify-center items-center">
+                    <img src="{{ Vite::asset('resources/images/nvidia.png') }}" alt="Client 10" class=" p-5 rounded-lg object-cover">
                     </div>
                 </div>
+                <p class="text-lg sm:text-xl md:text-2xl font-semibold  text-black max-w-2xl mx-auto mt-5 text-center">
+                    And Many More...
+                </p>
             </div>
 
             {{-- Values Section --}}
