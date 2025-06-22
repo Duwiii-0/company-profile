@@ -61,11 +61,11 @@ body::-webkit-scrollbar{
 
 .visi{
     background-image: url('../images/dummy.png');
-    height: 100vh;
+    height: auto;
     background-size: cover; /* Mengubah dari contain ke cover */
     background-repeat: no-repeat;
     background-position: center;
-    width: 100vw; /* Memastikan lebar penuh viewport */
+    width: auto; /* Memastikan lebar penuh viewport */
     margin-left: calc(50% - 50vw); /* Mengatur posisi untuk keluar dari container */
     margin-right: calc(50% - 50vw);
 
@@ -147,3 +147,4 @@ body::-webkit-scrollbar{
                 padding-right: 1rem;
             }
         }
+
