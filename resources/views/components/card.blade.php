@@ -1,6 +1,6 @@
 <section class="testi flex flex-col items-center justify-center space-x-5">
-    <div class="testi-container space-x-5 w-full h-[20vw]">
-        <div class="product-card bg-white w-lg h-lg rounded-lg p-5 shrink-0 ml-20 mb-20 shadow-3xl">
+    <div class="testi-container space-x-5 w-full h-auto ">
+        <div class="product-card bg-white w-lg rounded-lg p-5 shrink-0 ml-20 mb-20 shadow-2xl">
                 <div class="flex flex-col space-y-5 mt-5">
                     <h2 class="text-xl font-bold text-black">Beyond Expectation!</h2>
                     <p class="text-gray-500">At the core of our company lies a set of values that guide every action we take.<br> 
@@ -23,7 +23,7 @@
                 </div>
         </div>
 
-        <div class="product-card bg-white w-lg h-lg rounded-lg p-5 shrink-0 mb-20">
+        <div class="product-card bg-white w-lg h-lg rounded-lg p-5 shrink-0 mb-20 shadow-2xl">
                 <div class="flex flex-col space-y-5 mt-5">
                     <h2 class="text-xl font-bold text-black">Top-Notch Service!</h2>
                     <p class="text-gray-500">At the core of our company lies a set of values that guide every action we take.<br> 
@@ -46,7 +46,7 @@
                 </div>
         </div>
 
-        <div class="product-card bg-white w-lg h-lg rounded-lg p-5 shrink-0 mb-20">
+        <div class="product-card bg-white w-lg h-lg rounded-lg p-5 shrink-0 mb-20 shadow-2xl">
                 <div class="flex flex-col space-y-5 mt-5">
                     <h2 class="text-xl font-bold text-black">Top-Notch Service!</h2>
                     <p class="text-gray-500">At the core of our company lies a set of values that guide every action we take.<br> 
@@ -69,7 +69,7 @@
                 </div>
         </div>
 
-        <div class="product-card bg-white w-lg h-lg rounded-lg p-5 shrink-0 mb-20">
+        <div class="product-card bg-white w-lg h-lg rounded-lg p-5 shrink-0 mb-20 shadow-2xl">
                 <div class="flex flex-col space-y-5 mt-5">
                     <h2 class="text-xl font-bold text-black">Beyond Expectation</h2>
                     <p class="text-gray-500">At the core of our company lies a set of values that guide every action we take.<br> 
@@ -92,7 +92,7 @@
                 </div>
         </div>
 
-        <div class="product-card bg-white w-lg h-lg rounded-lg p-5 shrink-0  mb-20">
+        <div class="product-card bg-white w-lg h-lg rounded-lg p-5 shrink-0  mb-20 shadow-2xl">
                 <div class="flex flex-col space-y-5 mt-5">
                     <h2 class="text-xl font-bold text-black">Beyond Expectation</h2>
                     <p class="text-gray-500">At the core of our company lies a set of values that guide every action we take.<br> 
@@ -115,7 +115,7 @@
                 </div>
         </div>
 
-        <div class="product-card bg-white w-lg h-lg rounded-lg p-5 shrink-0  mb-20">
+        <div class="product-card bg-white w-lg h-lg rounded-lg p-5 shrink-0  mb-20 shadow-2xl">
                 <div class="flex flex-col space-y-5 mt-5">
                     <h2 class="text-xl font-bold text-black">Top-Notch Service!</h2>
                     <p class="text-gray-500">At the core of our company lies a set of values that guide every action we take.<br> 
@@ -137,9 +137,9 @@
                     </div>
                 </div>
         </div>
-
     </div>
-    <div class="flex">
+    
+    <div class="flex space-x-5">
         <button class="pre-btn w-10 h-10 rounded-full flex items-center justify-center pr-1">
                 <x-icons.left-arrow class="w-6 h-6"/>
         </button>

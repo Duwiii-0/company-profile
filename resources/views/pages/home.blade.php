@@ -879,8 +879,10 @@
     </section>
 
 
-    <section id="testi" class="py-16 h-[90vh] bg-gray-100">
+    <section id="testi" class="py-16 pt-10 h-[90vh] bg-gray-100 ">
         <h2 class="text-5xl font-bold mb-20 text-black text-shadow-glow text-center">Experince Shared By<br>Our Clients</h2>
         <x-card />
+    </section>
+    <section id="testi" class="py-16 pt-10 h-[1vh] bg-gray-100 ">
     </section>
 @endsection
