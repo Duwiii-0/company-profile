@@ -57,31 +57,34 @@
                     {{-- Team Member 1 --}}
                     <div class="flex flex-col h-96 w-64">
                         <div
-                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center overflow-hidden flex flex-row flex-2/3 items-end justify-end"
+                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-300 overflow-hidden flex flex-row flex-2/3 items-end justify-end"
                             style="background-image: url('{{ Vite::asset('resources/images/profile4.png') }}');">
-                            <div class="flex flex-col p-2 rounded-tl-lg bg-gray-100 space-y-6">
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
-                                    <a href="https://linkedin.com/company/adipratama" target="_blank"
-                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.linkedinA class="w-3 h-3 " />
-                                    </a>
-                                </div>
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                            <div class="flex flex-col p-2  bg-gray-100 space-y-6">
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
                                     <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.XA class="w-3 h-3" />
+                                         <img src="{{ Vite::asset('resources/images/linkedinR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                     </a>
                                 </div>
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
                                     <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.facebookA class="w-3 h-3"/>
+                                         <img src="{{ Vite::asset('resources/images/XR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
+                                    </a>
+                                </div>
+                                <div class="bg-gray-900 w-10 h-10 flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                         <img src="{{ Vite::asset('resources/images/facebookR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="pl-3 pt-2">
-                            <h3 class="text-xl font-bold border-red-700">Sarah Lestari</h3>
+                            <h3 class="text-xl font-bold text-red-700">Sarah Lestari</h3>
                             <p class="text-sm text-gray-500 font-semibold">UI/UX Design Lead</p>
                         </div>
                     </div>
@@ -89,31 +92,34 @@
                     {{-- Team Member 2 --}}
                     <div class="flex flex-col h-96 w-64">
                         <div
-                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center overflow-hidden flex flex-row flex-2/3 items-end justify-end"
+                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-300 overflow-hidden flex flex-row flex-2/3 items-end justify-end"
                             style="background-image: url('{{ Vite::asset('resources/images/profile4.png') }}');">
-                            <div class="flex flex-col p-2 rounded-tl-lg bg-gray-100 space-y-6">
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
-                                    <a href="https://linkedin.com/company/adipratama" target="_blank"
-                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.linkedinA class="w-3 h-3 " />
-                                    </a>
-                                </div>
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                            <div class="flex flex-col p-2  bg-gray-100 space-y-6">
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
                                     <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.XA class="w-3 h-3" />
+                                         <img src="{{ Vite::asset('resources/images/linkedinR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                     </a>
                                 </div>
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
                                     <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.facebookA class="w-3 h-3"/>
+                                         <img src="{{ Vite::asset('resources/images/XR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
+                                    </a>
+                                </div>
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                         <img src="{{ Vite::asset('resources/images/facebookR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="pl-3 pt-2">
-                            <h3 class="text-xl font-bold border-red-700">Sarah Lestari</h3>
+                            <h3 class="text-xl font-bold text-red-700">Sarah Lestari</h3>
                             <p class="text-sm text-gray-500 font-semibold">UI/UX Design Lead</p>
                         </div>
                     </div>
@@ -121,31 +127,34 @@
                     {{-- Team Member 3 --}}
                     <div class="flex flex-col h-96 w-64">
                         <div
-                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center overflow-hidden flex flex-row flex-2/3 items-end justify-end"
+                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-300 overflow-hidden flex flex-row flex-2/3 items-end justify-end"
                             style="background-image: url('{{ Vite::asset('resources/images/profile4.png') }}');">
-                            <div class="flex flex-col p-2 rounded-tl-lg bg-gray-100 space-y-6">
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
-                                    <a href="https://linkedin.com/company/adipratama" target="_blank"
+                            <div class="flex flex-col p-2  bg-gray-100 space-y-6">
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
+                                   <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.linkedinA class="w-3 h-3 " />
+                                         <img src="{{ Vite::asset('resources/images/linkedinR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                     </a>
                                 </div>
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
                                     <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.XA class="w-3 h-3" />
+                                         <img src="{{ Vite::asset('resources/images/XR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                     </a>
                                 </div>
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
                                     <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.facebookA class="w-3 h-3"/>
+                                         <img src="{{ Vite::asset('resources/images/facebookR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="pl-3 pt-2">
-                            <h3 class="text-xl font-bold border-red-700">Sarah Lestari</h3>
+                            <h3 class="text-xl font-bold text-red-700">Sarah Lestari</h3>
                             <p class="text-sm text-gray-500 font-semibold">UI/UX Design Lead</p>
                         </div>
                     </div>
@@ -156,62 +165,68 @@
                     {{-- Team Member 4 --}}
                     <div class="flex flex-col h-96 w-64">
                         <div
-                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center overflow-hidden flex flex-row flex-2/3 items-end justify-end"
+                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-300 overflow-hidden flex flex-row flex-2/3 items-end justify-end"
                             style="background-image: url('{{ Vite::asset('resources/images/profile4.png') }}');">
-                            <div class="flex flex-col p-2 rounded-tl-lg bg-gray-100 space-y-6">
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
-                                    <a href="https://linkedin.com/company/adipratama" target="_blank"
+                            <div class="flex flex-col p-2  bg-gray-100 space-y-6">
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
+                                   <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.linkedinA class="w-3 h-3 " />
+                                         <img src="{{ Vite::asset('resources/images/linkedinR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                     </a>
                                 </div>
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
                                     <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.XA class="w-3 h-3" />
+                                         <img src="{{ Vite::asset('resources/images/XR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                     </a>
                                 </div>
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                <div class="bg-gray-900 w-10 h-10 flex items-center justify-center">
                                     <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.facebookA class="w-3 h-3"/>
+                                         <img src="{{ Vite::asset('resources/images/facebookR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="pl-3 pt-2">
-                            <h3 class="text-xl font-bold border-red-700">Sarah Lestari</h3>
+                            <h3 class="text-xl font-bold text-red-700">Sarah Lestari</h3>
                             <p class="text-sm text-gray-500 font-semibold">UI/UX Design Lead</p>
                         </div>
                     </div>
                     {{-- Team Member 5 --}}
                     <div class="flex flex-col h-96 w-64">
                         <div
-                            class=" backdrop-blur-lg rounded-lg rounded-br-none bg-cover bg-center overflow-hidden flex flex-row flex-2/3 items-end justify-end"
+                            class=" backdrop-blur-lg  rounded-lg  bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-300 overflow-hidden flex flex-row flex-2/3 items-end justify-end"
                             style="background-image: url('{{ Vite::asset('resources/images/profile4.png') }}');">
-                            <div class="flex flex-col p-2 rounded-tl-lg bg-gray-100 space-y-6">
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
-                                    <a href="https://linkedin.com/company/adipratama" target="_blank"
-                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.linkedinA class="w-3 h-3 " />
-                                    </a>
-                                </div>
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                            <div class="flex flex-col p-2 transition-all duration-300 space-y-6">
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
                                     <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.XA class="w-3 h-3" />
+                                         <img src="{{ Vite::asset('resources/images/linkedinR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                     </a>
                                 </div>
-                                <div class="bg-gray-400 w-10 h-10 rounded-md flex items-center justify-center">
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
                                     <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                        <x-icons.facebookA class="w-3 h-3"/>
+                                         <img src="{{ Vite::asset('resources/images/XR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
+                                    </a>
+                                </div>
+                                <div class="bg-gray-900 w-10 h-10  flex items-center justify-center">
+                                    <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                         <img src="{{ Vite::asset('resources/images/facebookR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="pl-3 pt-2">
-                            <h3 class="text-xl font-bold border-red-700">Sarah Lestari</h3>
+                            <h3 class="text-xl font-bold text-red-700">Sarah Lestari</h3>
                             <p class="text-sm text-gray-500 font-semibold">UI/UX Design Lead</p>
                         </div>
                     </div>
