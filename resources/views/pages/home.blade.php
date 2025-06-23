@@ -3,7 +3,7 @@
 @section('title', 'Profil Perusahaan')
 
 @section('content')
-
+<div class="bg-gradient-to-br from-red-700 via-red-600 to-pink-700">
     <x-hero />
 
     <!-- Welcome Section - Enhanced dengan Animasi dan Hover Effects -->
@@ -996,7 +996,7 @@
 
     <section id="clients" class="bg-gray-100 py-16">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-center"> Our Clients</h2>
+            <h2 class="text-5xl font-bold mb-8 text-center"> Our Clients</h2>
             <div class="flex justify-center">
                 <x-slider />
             </div>
@@ -1010,4 +1010,5 @@
     </section>
     <section id="testi" class="py-16 pt-10 h-[1vh] bg-gray-100 ">
     </section>
+</div>
 @endsection

@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mx-auto px-6 py-12 lg:px-8 mt-20">
+<div class="container mx-auto px-6 py-12 lg:px-8 mt-2 bg-gray-100">
     <!-- Header Section with enhanced animations -->
     <div class="mb-12 animate-slide-up">
-        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-50 via-white to-pink-50 p-8 lg:p-12">
+        <div class="relative overflow-hidden rounded-2xl p-8 lg:p-12">
             <!-- Background decoration -->
             <div class="absolute inset-0 bg-gradient-to-br from-purple-100/20 to-pink-100/20"></div>
             <div class="absolute -top-20 -right-20 w-40 h-40 bg-purple-200/30 rounded-full blur-3xl animate-float"></div>
             <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-pink-200/30 rounded-full blur-3xl animate-float-delayed"></div>
             
             <div class="relative z-10">
-                <h1 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-purple-700 to-pink-600 bg-clip-text text-transparent animate-gradient-shift">
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-red-700 to-pink-500 bg-clip-text text-transparent animate-gradient-shift">
                     Our Portfolio
                 </h1>
                 <p class="text-gray-600 leading-relaxed max-w-4xl text-lg">
@@ -24,7 +24,7 @@
 
     <!-- Filter Section with enhanced styling -->
     <div class="mb-12 animate-slide-up" style="animation-delay: 0.2s;">
-        <h2 class="text-2xl font-semibold mb-8 text-white">See our works by</h2>
+        <h2 class="text-2xl font-semibold mb-8 text-gray-900">See our works by</h2>
         
         <div class="flex flex-wrap items-center gap-6 mb-8 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
             <!-- Technology Filters -->
@@ -33,8 +33,8 @@
                     <button data-tech="{{ $tech }}" 
                        class="tech-filter group px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg
                               {{ ($filterTech ?? 'all') === $tech 
-                                 ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25 active' 
-                                 : 'bg-gray-100 text-gray-700 hover:bg-gradient-to-r hover:from-purple-100 hover:to-pink-100 hover:text-purple-600' }}">
+                                 ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white shadow-lg shadow-purple-500/25 active' 
+                                 : 'bg-gray-100 text-gray-700 hover:bg-gradient-to-r hover:from-red-100 hover:to-pink-100 hover:text-red-600' }}">
                         @if($tech === 'all')
                             <span class="flex items-center">
                                 <svg class="w-4 h-4 mr-2 transition-transform duration-300 group-hover:rotate-12" fill="currentColor" viewBox="0 0 20 20">
@@ -78,7 +78,7 @@
             <!-- Category Filter -->
             <div class="ml-auto">
                 <select id="category-filter" name="category" 
-                        class="px-6 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 hover:shadow-md bg-white">
+                        class="px-6 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none hover:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:shadow-md bg-white">
                     @foreach($categories as $value => $label)
                         <option value="{{ $value }}" {{ ($filterCategory ?? 'all') === $value ? 'selected' : '' }}>
                             {{ $label }}
@@ -88,7 +88,7 @@
             </div>
 
             <!-- Reset Button -->
-            <button id="reset-filters" class="px-6 py-3 text-sm text-gray-600 hover:text-purple-600 transition-all duration-300 hover:scale-105 rounded-xl border border-gray-200 hover:border-purple-200 hover:bg-purple-50">
+            <button id="reset-filters" class="px-6 py-3 text-sm text-gray-600 hover:text-red-600 transition-all duration-300 hover:scale-105 rounded-xl border border-gray-200 hover:border-red-200 hover:bg-red-50">
                 Reset
             </button>
         </div>
@@ -118,7 +118,7 @@
                             <div class="text-gray-400 text-2xl mb-4 font-semibold">No projects found</div>
                             <p class="text-gray-500 text-lg">Try adjusting your filters to see more results.</p>
                             <div class="mt-6">
-                                <button id="view-all-btn" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <button id="view-all-btn" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-600 to-pink-500 text-white rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                                     <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></path>
                                     </svg>
