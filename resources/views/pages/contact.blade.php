@@ -4,7 +4,6 @@
     <style>
         /* Contact Page Enhanced Styles */
         .contact-container {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             min-height: 100vh;
             position: relative;
             overflow: hidden;
@@ -31,40 +30,6 @@
             color: #64748b;
             font-weight: 400;
             line-height: 1.7;
-        }
-
-        /* Contact info items */
-        .contact-info-item {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 16px;
-            padding: 24px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-info-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #ef4444, #dc2626);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .contact-info-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            background: rgba(255, 255, 255, 0.95);
-        }
-
-        .contact-info-item:hover::before {
-            opacity: 1;
         }
 
         .contact-info-item h3 {
@@ -247,55 +212,54 @@
 
                     <div class="grid md:grid-cols-2 gap-8">
                         <!-- Call Center -->
-                        <div class="contact-info-item">
+                        <div class="bg-white pl-3 pt-3 pb-3 rounded-lg transition-all duration-300 hover:shadow-[-5px_5px_0_#FECACA] ">
                             <h3 class="text-lg font-semibold mb-3 flex items-center">
                                 <span class="icon-decoration">
                                     <i class="fas fa-phone"></i>
                                 </span>
                                 Pusat Panggilan
                             </h3>
-                            <div class="space-y-2">
-                                <p>0800 1234 567 89 90</p>
+                            <div class="px-3">
                                 <p>+62 21 1234 5678</p>
                             </div>
                         </div>
 
                         <!-- Our Location -->
-                        <div class="contact-info-item">
+                        <div class="bg-white pl-3 pt-3 pb-3 rounded-lg transition-all duration-300 hover:shadow-[-5px_5px_0_#FECACA] ">
                             <h3 class="text-lg font-semibold mb-3 flex items-center">
                                 <span class="icon-decoration">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </span>
                                 Lokasi Kami
                             </h3>
-                            <div class="space-y-2">
+                            <div class="space-y-2 px-3">
                                 <p>Gedung Cyber 2, Lt 15,<br>
-                                    Jl. HR. Rasuna Said Blok X-5 No.13<br>
-                                    Kuningan, Jakarta Selatan 12950<br>
+                                    Jl. HR. Rasuna Said Blok X-5 No.13,
+                                    Kuningan, Jakarta Selatan 12950
                                     Indonesia</p>
                             </div>
                         </div>
 
                         <!-- Email -->
-                        <div class="contact-info-item">
+                        <div class="bg-white pl-3 pt-3 pb-3 rounded-lg transition-all duration-300 hover:shadow-[-5px_5px_0_#FECACA] ">
                             <h3 class="text-lg font-semibold mb-3 flex items-center">
                                 <span class="icon-decoration">
                                     <i class="fas fa-envelope"></i>
                                 </span>
                                 Email
                             </h3>
-                            <p>adipratama@gmail.com</p>
+                            <p class="px-3 ">adipratama@gmail.com</p>
                         </div>
 
                         <!-- Social Network -->
-                        <div class="contact-info-item">
+                        <div class="bg-white pl-3 pt-3 pb-3 rounded-lg transition-all duration-300 hover:shadow-[-5px_5px_0_#FECACA] ">
                             <h3 class="text-lg font-semibold mb-3 flex items-center">
                                 <span class="icon-decoration">
                                     <i class="fas fa-share-alt"></i>
                                 </span>
                                 Media Sosial
                             </h3>
-                            <div class="flex space-x-4">
+                            <div class="flex space-x-4 px-3">
                                 <a href="https://linkedin.com/in/adipratama" target="_blank"
                                     class="social-icon w-10 h-10 flex items-center justify-center hover:scale-110 transition-all duration-300">
                                     <img src="{{ Vite::asset('resources/images/linkedinR.png') }}" alt="LinkedIn"
@@ -304,11 +268,11 @@
 
                                 <a href="https://instagram.com/adipratama" target="_blank"
                                     class="social-icon w-10 h-10 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                                    <img src="{{ Vite::asset('resources/images/instagramR.png') }}" alt="Instagram"
+                                    <img src="{{ Vite::asset('resources/images/whatsappR.png') }}" alt="Instagram"
                                         class="w-6 h-6 object-cover">
                                 </a>
                                 <a href="https://wa.me/628121302086" target="_blank"
-                                    class="social-icon w-10 h-10 flex items-center justify-center">
+                                    class="social-icon w-9 h-9 flex items-center justify-center">
                                          <img src="{{ Vite::asset('resources/images/instagramR.png') }}" alt="facebook"
                                         class="w-full h-full object-cover">
                                 </a>

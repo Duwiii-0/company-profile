@@ -7,9 +7,6 @@
     <div class="mb-12 animate-slide-up">
         <div class="relative overflow-hidden rounded-2xl p-8 lg:p-12">
             <!-- Background decoration -->
-            <div class="absolute inset-0 bg-gradient-to-br from-purple-100/20 to-pink-100/20"></div>
-            <div class="absolute -top-20 -right-20 w-40 h-40 bg-purple-200/30 rounded-full blur-3xl animate-float"></div>
-            <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-pink-200/30 rounded-full blur-3xl animate-float-delayed"></div>
             
             <div class="relative z-10">
             <h1 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-red-700 to-pink-500 bg-clip-text text-transparent animate-gradient-shift">
