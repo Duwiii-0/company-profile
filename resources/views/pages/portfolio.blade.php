@@ -12,7 +12,7 @@
             <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-pink-200/30 rounded-full blur-3xl animate-float-delayed"></div>
             
             <div class="relative z-10">
-                <h1 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-red-700 to-pink-500 bg-clip-text text-transparent animate-gradient-shift">
+            <h1 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-red-700 to-pink-500 bg-clip-text text-transparent animate-gradient-shift">
                     Our Portfolio
                 </h1>
                 <p class="text-gray-600 leading-relaxed max-w-4xl text-lg">
