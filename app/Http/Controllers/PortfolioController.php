@@ -12,25 +12,26 @@ class PortfolioController extends Controller
     {
         // Sample portfolio data - in real app, this would come from database
         $portfolios = collect([
-            [ 'id' => 1, 'title' => 'IndiHomeTV', 'category' => 'Streaming • Video on Demand', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => '/images/portfolio/indihometv.jpg', 'type' => 'web' ],
-            [ 'id' => 2, 'title' => 'JHO (BPJS Ketenagakerjaan)', 'category' => 'Insurance • Finance', 'technologies' => ['Android', 'iOS'], 'image' => '/images/portfolio/jho-bpjs.jpg', 'type' => 'mobile' ],
-            [ 'id' => 3, 'title' => 'Eraspace', 'category' => 'E-commerce • Lifestyle', 'technologies' => ['Web', 'Android'], 'image' => '/images/portfolio/eraspace.jpg', 'type' => 'web' ],
-            [ 'id' => 4, 'title' => 'MRT Jakarta', 'category' => 'Transportation • Lifestyle', 'technologies' => ['Android', 'iOS', 'Web'], 'image' => '/images/portfolio/mrt-jakarta.jpg', 'type' => 'mobile' ],
-            [ 'id' => 5, 'title' => 'Paragon SPM', 'category' => 'Productivity • Sales Force', 'technologies' => ['Web', 'Android'], 'image' => '/images/portfolio/paragon-spm.jpg', 'type' => 'web' ],
-            [ 'id' => 6, 'title' => 'TIX ID', 'category' => 'Streaming • Video on Demand', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => '/images/portfolio/tix-id.jpg', 'type' => 'mobile' ],
-            [ 'id' => 7, 'title' => 'Daihatsu', 'category' => 'Automotive • Lifestyle', 'technologies' => ['Android', 'iOS'], 'image' => '/images/portfolio/daihatsu.jpg', 'type' => 'mobile' ],
-            [ 'id' => 8, 'title' => 'Vovic', 'category' => 'Health • Wellness', 'technologies' => ['Web', 'Android'], 'image' => '/images/portfolio/vovic.jpg', 'type' => 'web' ],
-            [ 'id' => 9, 'title' => 'Acer', 'category' => 'Technology • E-commerce', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => '/images/portfolio/acer.jpg', 'type' => 'web' ],
-            [ 'id' => 10, 'title' => 'Travelista', 'category' => 'Travel • Booking', 'technologies' => ['Web', 'iOS'], 'image' => '/images/portfolio/travelista.jpg', 'type' => 'web' ],
-            [ 'id' => 11, 'title' => 'EduConnect', 'category' => 'Education • Platform', 'technologies' => ['Web', 'Android'], 'image' => '/images/portfolio/educonnect.jpg', 'type' => 'web' ],
-            [ 'id' => 12, 'title' => 'FitNation', 'category' => 'Health • Fitness', 'technologies' => ['Android', 'iOS'], 'image' => '/images/portfolio/fitnation.jpg', 'type' => 'mobile' ],
-            [ 'id' => 13, 'title' => 'Eventify', 'category' => 'Events • Ticketing', 'technologies' => ['Web'], 'image' => '/images/portfolio/eventify.jpg', 'type' => 'web' ],
-            [ 'id' => 14, 'title' => 'GreenKart', 'category' => 'E-commerce • Groceries', 'technologies' => ['Android', 'Web'], 'image' => '/images/portfolio/greenkart.jpg', 'type' => 'web' ],
-            [ 'id' => 15, 'title' => 'FinLite', 'category' => 'Finance • Budgeting', 'technologies' => ['iOS'], 'image' => '/images/portfolio/finlite.jpg', 'type' => 'mobile' ],
-            [ 'id' => 16, 'title' => 'RideLink', 'category' => 'Transportation • Ridesharing', 'technologies' => ['Android', 'iOS'], 'image' => '/images/portfolio/ridelink.jpg', 'type' => 'mobile' ],
-            [ 'id' => 17, 'title' => 'PetCare', 'category' => 'Health • Animals', 'technologies' => ['Web', 'iOS'], 'image' => '/images/portfolio/petcare.jpg', 'type' => 'web' ],
-            [ 'id' => 18, 'title' => 'SkillBoost', 'category' => 'Education • Skills', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => '/images/portfolio/skillboost.jpg', 'type' => 'web' ],
+            [ 'id' => 1, 'title' => 'IndiHomeTV', 'category' => 'Streaming • Video on Demand', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
+            [ 'id' => 2, 'title' => 'JHO (BPJS Ketenagakerjaan)', 'category' => 'Insurance • Finance', 'technologies' => ['Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
+            [ 'id' => 3, 'title' => 'Eraspace', 'category' => 'E-commerce • Lifestyle', 'technologies' => ['Web', 'Android'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
+            [ 'id' => 4, 'title' => 'MRT Jakarta', 'category' => 'Transportation • Lifestyle', 'technologies' => ['Android', 'iOS', 'Web'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
+            [ 'id' => 5, 'title' => 'Paragon SPM', 'category' => 'Productivity • Sales Force', 'technologies' => ['Web', 'Android'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
+            [ 'id' => 6, 'title' => 'TIX ID', 'category' => 'Streaming • Video on Demand', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
+            [ 'id' => 7, 'title' => 'Daihatsu', 'category' => 'Automotive • Lifestyle', 'technologies' => ['Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
+            [ 'id' => 8, 'title' => 'Vovic', 'category' => 'Health • Wellness', 'technologies' => ['Web', 'Android'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
+            [ 'id' => 9, 'title' => 'Acer', 'category' => 'Technology • E-commerce', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
+            [ 'id' => 10, 'title' => 'Travelista', 'category' => 'Travel • Booking', 'technologies' => ['Web', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
+            [ 'id' => 11, 'title' => 'EduConnect', 'category' => 'Education • Platform', 'technologies' => ['Web', 'Android'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
+            [ 'id' => 12, 'title' => 'FitNation', 'category' => 'Health • Fitness', 'technologies' => ['Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
+            [ 'id' => 13, 'title' => 'Eventify', 'category' => 'Events • Ticketing', 'technologies' => ['Web'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
+            [ 'id' => 14, 'title' => 'GreenKart', 'category' => 'E-commerce • Groceries', 'technologies' => ['Android', 'Web'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
+            [ 'id' => 15, 'title' => 'FinLite', 'category' => 'Finance • Budgeting', 'technologies' => ['iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
+            [ 'id' => 16, 'title' => 'RideLink', 'category' => 'Transportation • Ridesharing', 'technologies' => ['Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
+            [ 'id' => 17, 'title' => 'PetCare', 'category' => 'Health • Animals', 'technologies' => ['Web', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
+            [ 'id' => 18, 'title' => 'SkillBoost', 'category' => 'Education • Skills', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
         ]);
+
 
         // Filter by technology if requested
         $filterTech = $request->get('tech', 'all');
@@ -84,16 +85,16 @@ class PortfolioController extends Controller
         ];
 
         if ($request->ajax() || $request->get('ajax')) {
-            // Generate portfolio grid HTML
-            $portfolioGridHtml = '';
+            $html = '';
+
             if ($pagedPortfolios->count() > 0) {
                 foreach ($pagedPortfolios as $index => $portfolio) {
                     $delay = $index * 0.1;
                     $cardHtml = view('components.portfoliocard', ['portfolio' => $portfolio])->render();
-                    $portfolioGridHtml .= '<div class="animate-fade-in-up" style="animation-delay: ' . $delay . 's;">' . $cardHtml . '</div>';
+                    $html .= '<div class="animate-fade-in-up" style="animation-delay: ' . $delay . 's;">' . $cardHtml . '</div>';
                 }
             } else {
-                $portfolioGridHtml = '
+                $html = '
                     <div class="col-span-full text-center py-20 animate-fade-in">
                         <div class="relative">
                             <div class="absolute inset-0 flex items-center justify-center">
@@ -115,31 +116,13 @@ class PortfolioController extends Controller
                     </div>';
             }
 
-            // Generate pagination HTML
-            $paginationHtml = '';
-            if ($pagedPortfolios->hasPages()) {
-                $paginationHtml = '
-                    <div class="mt-12 flex justify-center pagination-container">
-                        <nav class="inline-flex rounded-md shadow-sm" role="navigation" aria-label="Pagination">
-                            ' . $pagedPortfolios->appends($request->query())->links('pagination::tailwind')->toHtml() . '
-                        </nav>
-                    </div>';
-            }
-
-            // Combine grid and pagination
-            $fullHtml = '
-                <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    ' . $portfolioGridHtml . '
-                </div>
-                ' . $paginationHtml;
+            // Render pagination links with preserved filters
+            $pagination = $pagedPortfolios->withQueryString()->links('pagination::tailwind')->render();
 
             return response()->json([
-                'html' => $fullHtml,
-                'count' => $pagedPortfolios->count(),
-                'total' => $pagedPortfolios->total(),
-                'currentPage' => $pagedPortfolios->currentPage(),
-                'lastPage' => $pagedPortfolios->lastPage(),
-                'hasPages' => $pagedPortfolios->hasPages()
+                'html' => $html,
+                'pagination' => $pagination,
+                'count' => $pagedPortfolios->count()
             ]);
         }
 

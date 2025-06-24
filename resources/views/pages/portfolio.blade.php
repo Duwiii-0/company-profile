@@ -132,7 +132,7 @@
             @endforelse
         </div>
         @if ($portfolios->hasPages())
-            <div class="mt-12 flex justify-center pagination-container">
+            <div class="mt-12 flex justify-center pagination-container" id="pagination-container">
                 <nav class="inline-flex rounded-md shadow-sm" role="navigation" aria-label="Pagination">
                     {{ $portfolios->appends(request()->query())->links('pagination::tailwind') }}
                 </nav>
@@ -190,6 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to fetch filtered portfolios
     async function fetchPortfolios() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         showLoading();
         
         try {
@@ -222,6 +223,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 newCards.forEach((card, index) => {
                     card.style.animationDelay = `${index * 0.1}s`;
                 });
+
+                // Insert new pagination if available
+                const paginationContainer = document.getElementById('pagination-container');
+                if (paginationContainer && data.pagination) {
+                    paginationContainer.innerHTML = data.pagination;
+
+                    // Reattach click handlers for AJAX pagination
+                    reattachPaginationHandlers();
+                }
                 
                 // Update URL without page refresh
                 const url = new URL(window.location);
@@ -266,6 +276,65 @@ document.addEventListener('DOMContentLoaded', function() {
                     </button>
                 </div>
             `;
+        }
+    }
+
+    function reattachPaginationHandlers() {
+        document.querySelectorAll('#pagination-container a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const url = new URL(this.href);
+                const page = url.searchParams.get('page');
+
+                const params = new URLSearchParams();
+                if (currentTech !== 'all') params.append('tech', currentTech);
+                if (currentCategory !== 'all') params.append('category', currentCategory);
+                params.append('ajax', '1');
+                params.append('page', page);
+
+                fetchPortfoliosWithParams(params);
+            });
+        });
+    }
+
+    // Optional: wrapper for fetchPortfolios that accepts custom params
+    async function fetchPortfoliosWithParams(params) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        showLoading();
+        try {
+            const response = await fetch(`{{ url()->current() }}?${params.toString()}`, {
+                method: 'GET',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': csrfToken,
+                    'Accept': 'application/json'
+                }
+            });
+
+            const data = await response.json();
+
+            setTimeout(() => {
+                portfolioGrid.innerHTML = data.html;
+
+                const newCards = portfolioGrid.querySelectorAll('.animate-fade-in-up');
+                newCards.forEach((card, index) => {
+                    card.style.animationDelay = `${index * 0.1}s`;
+                });
+
+                const paginationContainer = document.getElementById('pagination-container');
+                if (paginationContainer && data.pagination) {
+                    paginationContainer.innerHTML = data.pagination;
+                    reattachPaginationHandlers();
+                }
+
+                hideLoading();
+                observePortfolioCards();
+
+            }, 300);
+
+        } catch (error) {
+            console.error('Error fetching portfolios:', error);
+            hideLoading();
         }
     }
     
