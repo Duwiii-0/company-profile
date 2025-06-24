@@ -125,7 +125,7 @@
             <div class="flex items-center space-x-4">
                 <a href="https://facebook.com/adipratama" target="_blank"
                     class="social-icon w-10 h-10 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                    <x-icons.facebook class="w-5 h-5 text-white" />
+                    <x-icons.facebook class="w-5 h-5"/>
                 </a>
                 <a href="https://instagram.com/adipratama" target="_blank"
                     class="social-icon w-10 h-10 flex items-center justify-center hover:scale-110 transition-all duration-300">

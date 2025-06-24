@@ -1,17 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mx-auto px-6 py-12 lg:px-8 mt-20">
+@vite('resources/css/portfolio.css')
+<div class="container mx-auto px-6 py-12 lg:px-8 mt-2 bg-gray-100">
     <!-- Header Section with enhanced animations -->
     <div class="mb-12 animate-slide-up">
-        <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-50 via-white to-pink-50 p-8 lg:p-12">
+        <div class="relative overflow-hidden rounded-2xl p-8 lg:p-12">
             <!-- Background decoration -->
             <div class="absolute inset-0 bg-gradient-to-br from-purple-100/20 to-pink-100/20"></div>
             <div class="absolute -top-20 -right-20 w-40 h-40 bg-purple-200/30 rounded-full blur-3xl animate-float"></div>
             <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-pink-200/30 rounded-full blur-3xl animate-float-delayed"></div>
             
             <div class="relative z-10">
-                <h1 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-purple-700 to-pink-600 bg-clip-text text-transparent animate-gradient-shift">
+            <h1 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-red-700 to-pink-500 bg-clip-text text-transparent animate-gradient-shift">
                     Our Portfolio
                 </h1>
                 <p class="text-gray-600 leading-relaxed max-w-4xl text-lg">
@@ -24,7 +25,7 @@
 
     <!-- Filter Section with enhanced styling -->
     <div class="mb-12 animate-slide-up" style="animation-delay: 0.2s;">
-        <h2 class="text-2xl font-semibold mb-8 text-white">See our works by</h2>
+        <h2 class="text-2xl font-semibold mb-8 text-gray-900">See our works by</h2>
         
         <div class="flex flex-wrap items-center gap-6 mb-8 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
             <!-- Technology Filters -->
@@ -33,8 +34,8 @@
                     <button data-tech="{{ $tech }}" 
                        class="tech-filter group px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg
                               {{ ($filterTech ?? 'all') === $tech 
-                                 ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25 active' 
-                                 : 'bg-gray-100 text-gray-700 hover:bg-gradient-to-r hover:from-purple-100 hover:to-pink-100 hover:text-purple-600' }}">
+                                 ? 'bg-gradient-to-r from-red-600 to-pink-600 text-white shadow-lg shadow-purple-500/25 active' 
+                                 : 'bg-gray-100 text-gray-700 hover:bg-gradient-to-r hover:from-red-100 hover:to-pink-100 hover:text-red-600' }}">
                         @if($tech === 'all')
                             <span class="flex items-center">
                                 <svg class="w-4 h-4 mr-2 transition-transform duration-300 group-hover:rotate-12" fill="currentColor" viewBox="0 0 20 20">
@@ -78,7 +79,7 @@
             <!-- Category Filter -->
             <div class="ml-auto">
                 <select id="category-filter" name="category" 
-                        class="px-6 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 hover:shadow-md bg-white">
+                        class="px-6 py-3 border border-gray-300 rounded-xl text-sm focus:outline-none hover:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:shadow-md bg-white">
                     @foreach($categories as $value => $label)
                         <option value="{{ $value }}" {{ ($filterCategory ?? 'all') === $value ? 'selected' : '' }}>
                             {{ $label }}
@@ -88,7 +89,7 @@
             </div>
 
             <!-- Reset Button -->
-            <button id="reset-filters" class="px-6 py-3 text-sm text-gray-600 hover:text-purple-600 transition-all duration-300 hover:scale-105 rounded-xl border border-gray-200 hover:border-purple-200 hover:bg-purple-50">
+            <button id="reset-filters" class="px-6 py-3 text-sm text-gray-600 hover:text-red-600 transition-all duration-300 hover:scale-105 rounded-xl border border-gray-200 hover:border-red-200 hover:bg-red-50">
                 Reset
             </button>
         </div>
@@ -118,7 +119,7 @@
                             <div class="text-gray-400 text-2xl mb-4 font-semibold">No projects found</div>
                             <p class="text-gray-500 text-lg">Try adjusting your filters to see more results.</p>
                             <div class="mt-6">
-                                <button id="view-all-btn" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <button id="view-all-btn" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-600 to-pink-500 text-white rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                                     <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></path>
                                     </svg>
@@ -131,158 +132,14 @@
             @endforelse
         </div>
         @if ($portfolios->hasPages())
-        <div class="mt-12 flex justify-center">
-            <nav class="inline-flex rounded-md shadow-sm" role="navigation" aria-label="Pagination">
-                {{ $portfolios->withQueryString()->links('pagination::tailwind') }}
-            </nav>
-        </div>
+            <div class="mt-12 flex justify-center pagination-container" id="pagination-container">
+                <nav class="inline-flex rounded-md shadow-sm" role="navigation" aria-label="Pagination">
+                    {{ $portfolios->appends(request()->query())->links('pagination::tailwind') }}
+                </nav>
+            </div>
         @endif
     </div>
 </div>
-
-<style>
-/* Custom animations */
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slide-up {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fade-in-up {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-20px) rotate(5deg);
-    }
-}
-
-@keyframes float-delayed {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-15px) rotate(-3deg);
-    }
-}
-
-@keyframes gradient-shift {
-    0%, 100% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-}
-
-.animate-fade-in {
-    animation: fade-in 0.8s ease-out forwards;
-}
-
-.animate-slide-up {
-    animation: slide-up 0.8s ease-out forwards;
-    opacity: 0;
-}
-
-.animate-fade-in-up {
-    animation: fade-in-up 0.8s ease-out forwards;
-    opacity: 0;
-}
-
-.animate-float {
-    animation: float 6s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-    animation: float-delayed 8s ease-in-out infinite;
-    animation-delay: 2s;
-}
-
-.animate-gradient-shift {
-    background-size: 200% 200%;
-    animation: gradient-shift 4s ease infinite;
-}
-
-/* Hover effects for portfolio cards */
-.portfolio-card {
-    transition: all 0.3s ease;
-}
-
-.portfolio-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* Loading skeleton animation */
-@keyframes skeleton-loading {
-    0% {
-        background-position: -200px 0;
-    }
-    100% {
-        background-position: calc(200px + 100%) 0;
-    }
-}
-
-.skeleton {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200px 100%;
-    animation: skeleton-loading 1.5s infinite;
-}
-
-/* Filter transition effects */
-.tech-filter.active {
-    background: linear-gradient(to right, #9333ea, #ec4899) !important;
-    color: white !important;
-    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.25);
-}
-
-.portfolio-fade-out {
-    opacity: 0.3;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-}
-
-.portfolio-fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.3s ease;
-}
-
-/* Responsive improvements */
-@media (max-width: 768px) {
-    .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-}
-</style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -333,6 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Function to fetch filtered portfolios
     async function fetchPortfolios() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         showLoading();
         
         try {
@@ -365,6 +223,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 newCards.forEach((card, index) => {
                     card.style.animationDelay = `${index * 0.1}s`;
                 });
+
+                // Insert new pagination if available
+                const paginationContainer = document.getElementById('pagination-container');
+                if (paginationContainer && data.pagination) {
+                    paginationContainer.innerHTML = data.pagination;
+
+                    // Reattach click handlers for AJAX pagination
+                    reattachPaginationHandlers();
+                }
                 
                 // Update URL without page refresh
                 const url = new URL(window.location);
@@ -409,6 +276,65 @@ document.addEventListener('DOMContentLoaded', function() {
                     </button>
                 </div>
             `;
+        }
+    }
+
+    function reattachPaginationHandlers() {
+        document.querySelectorAll('#pagination-container a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const url = new URL(this.href);
+                const page = url.searchParams.get('page');
+
+                const params = new URLSearchParams();
+                if (currentTech !== 'all') params.append('tech', currentTech);
+                if (currentCategory !== 'all') params.append('category', currentCategory);
+                params.append('ajax', '1');
+                params.append('page', page);
+
+                fetchPortfoliosWithParams(params);
+            });
+        });
+    }
+
+    // Optional: wrapper for fetchPortfolios that accepts custom params
+    async function fetchPortfoliosWithParams(params) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        showLoading();
+        try {
+            const response = await fetch(`{{ url()->current() }}?${params.toString()}`, {
+                method: 'GET',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': csrfToken,
+                    'Accept': 'application/json'
+                }
+            });
+
+            const data = await response.json();
+
+            setTimeout(() => {
+                portfolioGrid.innerHTML = data.html;
+
+                const newCards = portfolioGrid.querySelectorAll('.animate-fade-in-up');
+                newCards.forEach((card, index) => {
+                    card.style.animationDelay = `${index * 0.1}s`;
+                });
+
+                const paginationContainer = document.getElementById('pagination-container');
+                if (paginationContainer && data.pagination) {
+                    paginationContainer.innerHTML = data.pagination;
+                    reattachPaginationHandlers();
+                }
+
+                hideLoading();
+                observePortfolioCards();
+
+            }, 300);
+
+        } catch (error) {
+            console.error('Error fetching portfolios:', error);
+            hideLoading();
         }
     }
     

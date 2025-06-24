@@ -123,7 +123,7 @@
                     </p>
                     <div class="flex justify-between items-center space-x-2">
                         <div class="flex space-x-5 items-center">
-                            <div class="h-16 w-16 rounded-full ml-1 mt-3">
+                            <div class="h-16 w-16 rounded-full ml-1 mt-3 bg-clip">
                                 <img src="{{ Vite::asset('resources/images/profile.png') }}" alt="Client 1" class="h-full w-full object-cover rounded-full">
                             </div>
                             <div class="flex flex-col mt-2">
@@ -139,11 +139,11 @@
         </div>
     </div>
     
-    <div class="flex space-x-5">
-        <button class="pre-btn w-10 h-10 rounded-full flex items-center justify-center pr-1">
-                <x-icons.left-arrow class="w-6 h-6"/>
+    <div class="flex space-x-5 ">
+        <button class="pre-btn w-10 h-10 rounded-full  flex items-center rotate-180 justify-center pl-1">
+                <x-icons.right-arrow-2 class="w-6 h-6 "/>
         </button>
-        <button class="nxt-btn w-10 h-10 rounded-full flex items-center justify-center pl-1">
+        <button class="nxt-btn w-10 h-10 rounded-full  flex items-center justify-center pl-1">
             <x-icons.right-arrow-2 class="w-6 h-6" />
         </button>
     </div>

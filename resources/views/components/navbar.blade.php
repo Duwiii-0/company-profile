@@ -16,7 +16,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('home') }}#about"
+                <a href="{{ route('aboutus') }}"
                     class="nav-link text-white hover:text-white transition-all duration-300 relative font-semibold {{ request()->is('about') ? 'active' : '' }}">
                     About
                 </a>

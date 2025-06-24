@@ -81,25 +81,30 @@
                                 Media Sosial
                             </h3>
                             <div class="flex space-x-4">
-                                <a href="https://facebook.com/adipratama" target="_blank"
-                                    class="social-icon w-10 h-10 flex items-center justify-center">
-                                    <x-icons.facebook class="w-5 h-5" />
+                                <a href="https://twitter.com/adipratama" target="_blank"
+                                    class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                    <img src="{{ Vite::asset('resources/images/linkedinR.png') }}" alt="facebook"
+                                    class="w-full h-full object-cover">
                                 </a>
-                                <a href="https://instagram.com/adipratama" target="_blank"
-                                    class="social-icon w-10 h-10 flex items-center justify-center">
-                                    <x-icons.instagram class="w-5 h-5" />
-                                </a>
+                                
+                                <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-7 h-7 flex items-center justify-center hover:scale-110 transition-all duration-300">
+                                         <img src="{{ Vite::asset('resources/images/instagramR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
+                                    </a>
                                 <a href="https://wa.me/628121302086" target="_blank"
                                     class="social-icon w-10 h-10 flex items-center justify-center">
                                     <x-icons.whatsapp class="w-5 h-5" />
                                 </a>
-                                <a href="https://linkedin.com/company/adipratama" target="_blank"
-                                    class="social-icon w-10 h-10 flex items-center justify-center">
-                                    <x-icons.linkedin class="w-5 h-5" />
-                                </a>
+                               <a href="https://twitter.com/adipratama" target="_blank"
+                                        class="social-icon w-10 h-10 flex items-center justify-center">
+                                         <img src="{{ Vite::asset('resources/images/linkedinR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
+                                    </a>
                                 <a href="https://twitter.com/adipratama" target="_blank"
-                                    class="social-icon w-10 h-10 flex items-center justify-center">
-                                    <x-icons.x class="w-5 h-5" />
+                                    class="social-icon w-7 h-7 flex items-center justify-center">
+                                        <img src="{{ Vite::asset('resources/images/XR.png') }}" alt="facebook"
+                                    class="w-full h-full object-cover">
                                 </a>
                             </div>
                         </div>
