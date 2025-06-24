@@ -2,7 +2,7 @@
 
 @section('content')
     {{-- About Us Section --}}
-    <section id="about" class="relative  bg-gradient-to-br from-red-50 to-orange-50 overflow-hidden">
+    <section id="about" class="relative  bg-gray-100 overflow-hidden">
 
         <div class="">
             
@@ -197,8 +197,9 @@
                 <div class="relative">
                     {{-- Icon container with enhanced styling --}}
                     <div class="w-24 h-24  mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-all duration-300">
-                        <div class="w-12 h-12 flex items-center justify-center">
-                            <x-icons.innovation class="w-12 h-12 text-red-600"/>
+                        <div class="w-25 h-25 flex items-center justify-center">
+                            <img src="{{ Vite::asset('resources/images/innovation.png') }}" alt="collab"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
                     
@@ -220,8 +221,9 @@
                 <div class="relative">
                     {{-- Icon container with enhanced styling --}}
                     <div class="w-24 h-24  mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-all duration-300">
-                        <div class="w-12 h-12 flex items-center justify-center">
-                            <x-icons.quallity class="w-12 h-12 text-red-600"/>
+                        <div class="w-25 h-25 flex items-center justify-center">
+                            <img src="{{ Vite::asset('resources/images/quality.png') }}" alt="collab"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
                     
@@ -243,12 +245,13 @@
                 <div class="relative">
                     {{-- Icon container with enhanced styling --}}
                     <div class="w-24 h-24 rounded-2xl mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-all duration-300">
-                        <div class="w-12 h-12 flex items-center justify-center">
-                            <x-icons.collab class="w-12 h-12 text-red-600"/>
+                        <div class="w-25 h-25 flex items-center justify-center">
+                            <img src="{{ Vite::asset('resources/images/collab.png') }}" alt="collab"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold bg-gradient-to-r from-gray-800 to-gray-900 bg-clip-text text-transparent mb-4 group-hover:from-red-600 group-hover:to-red-700 transition-all duration-300">Great Team</h3>
+                    <h3 class="text-2xl font-bold bg-gradient-to-r from-gray-800 to-gray-900 bg-clip-text text-transparent mb-4 group-hover:from-red-600 group-hover:to-red-700 transition-all duration-300">Collaboraton</h3>
                     <p class="text-gray-600 leading-relaxed">
                         Bekerja sama dengan klien sebagai partner untuk mencapai kesuksesan bersama
                     </p>
@@ -265,12 +268,10 @@
                 <div class="relative">
                     {{-- Icon container with enhanced styling --}}
                     <div class="w-24 h-24  mx-auto mb-6 flex items-center justify-center  group-hover:scale-110 transition-all duration-300">
-                        <div class="w-12 h-12 flex items-center justify-center">
-                            {{-- Trust/Shield icon placeholder - replace with your actual icon component --}}
-                            <svg class="w-12 h-12 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7L12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
-                        </div>
+                            <div class="w-25 h-25 flex items-center justify-center">
+                                <img src="{{ Vite::asset('resources/images/reliability.png') }}" alt="collab"
+                                    class="w-full h-full object-cover">
+                            </div>
                     </div>
                     
                     <h3 class="text-2xl font-bold bg-gradient-to-r from-gray-800 to-gray-900 bg-clip-text text-transparent mb-4 group-hover:from-red-600 group-hover:to-red-700 transition-all duration-300">Trust & Reliability</h3>
@@ -458,7 +459,7 @@
                 </div>
                 
                 <a href="{{ route('contact') }}"
-                    class="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-medium rounded-2xl hover:from-red-700 hover:to-red-800 shadow-lg hover:shadow-2xl transition-all duration-200 transform hover:-translate-y-1 hover:scale-103">
+                    class="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white font-medium rounded-2xl hover:from-red-700 hover:to-red-800 shadow-lg hover:shadow-2xl transition-all duration-200 transform hover:scale-103">
                     <span class="mr-3 tracking-wide">Start Conversation</span>
                     <svg class="w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
