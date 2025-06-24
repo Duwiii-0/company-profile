@@ -17,7 +17,7 @@
         <!-- Hover Overlay -->
         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
             <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button class="bg-white text-gray-900 px-4 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition-colors">
+                <button class="bg-white text-gray-900 px-4 py-2 rounded-full text-sm font-medium hover:bg-red-700 transition-colors hover:text-white">
                     View Project
                 </button>
             </div>
