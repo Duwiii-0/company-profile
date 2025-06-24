@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@vite('resources/css/portfolio.css')
 <div class="container mx-auto px-6 py-12 lg:px-8 mt-2 bg-gray-100">
     <!-- Header Section with enhanced animations -->
     <div class="mb-12 animate-slide-up">
@@ -131,158 +132,14 @@
             @endforelse
         </div>
         @if ($portfolios->hasPages())
-        <div class="mt-12 flex justify-center">
-            <nav class="inline-flex rounded-md shadow-sm" role="navigation" aria-label="Pagination">
-                {{ $portfolios->withQueryString()->links('pagination::tailwind') }}
-            </nav>
-        </div>
+            <div class="mt-12 flex justify-center pagination-container">
+                <nav class="inline-flex rounded-md shadow-sm" role="navigation" aria-label="Pagination">
+                    {{ $portfolios->appends(request()->query())->links('pagination::tailwind') }}
+                </nav>
+            </div>
         @endif
     </div>
 </div>
-
-<style>
-/* Custom animations */
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slide-up {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fade-in-up {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-20px) rotate(5deg);
-    }
-}
-
-@keyframes float-delayed {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-15px) rotate(-3deg);
-    }
-}
-
-@keyframes gradient-shift {
-    0%, 100% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-}
-
-.animate-fade-in {
-    animation: fade-in 0.8s ease-out forwards;
-}
-
-.animate-slide-up {
-    animation: slide-up 0.8s ease-out forwards;
-    opacity: 0;
-}
-
-.animate-fade-in-up {
-    animation: fade-in-up 0.8s ease-out forwards;
-    opacity: 0;
-}
-
-.animate-float {
-    animation: float 6s ease-in-out infinite;
-}
-
-.animate-float-delayed {
-    animation: float-delayed 8s ease-in-out infinite;
-    animation-delay: 2s;
-}
-
-.animate-gradient-shift {
-    background-size: 200% 200%;
-    animation: gradient-shift 4s ease infinite;
-}
-
-/* Hover effects for portfolio cards */
-.portfolio-card {
-    transition: all 0.3s ease;
-}
-
-.portfolio-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-/* Loading skeleton animation */
-@keyframes skeleton-loading {
-    0% {
-        background-position: -200px 0;
-    }
-    100% {
-        background-position: calc(200px + 100%) 0;
-    }
-}
-
-.skeleton {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200px 100%;
-    animation: skeleton-loading 1.5s infinite;
-}
-
-/* Filter transition effects */
-.tech-filter.active {
-    background: linear-gradient(to right, #9333ea, #ec4899) !important;
-    color: white !important;
-    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.25);
-}
-
-.portfolio-fade-out {
-    opacity: 0.3;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-}
-
-.portfolio-fade-in {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.3s ease;
-}
-
-/* Responsive improvements */
-@media (max-width: 768px) {
-    .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-}
-</style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

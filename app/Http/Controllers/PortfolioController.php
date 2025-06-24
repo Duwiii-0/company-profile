@@ -32,9 +32,8 @@ class PortfolioController extends Controller
             [ 'id' => 18, 'title' => 'SkillBoost', 'category' => 'Education • Skills', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => '/images/portfolio/skillboost.jpg', 'type' => 'web' ],
         ]);
 
-
         // Filter by technology if requested
-        $filterTech = $request->get('tech');
+        $filterTech = $request->get('tech', 'all');
         if ($filterTech && $filterTech !== 'all') {
             $portfolios = $portfolios->filter(function ($portfolio) use ($filterTech) {
                 $techMapping = [
@@ -49,7 +48,7 @@ class PortfolioController extends Controller
         }
 
         // Filter by category if requested
-        $filterCategory = $request->get('category');
+        $filterCategory = $request->get('category', 'all');
         if ($filterCategory && $filterCategory !== 'all') {
             $portfolios = $portfolios->filter(function ($portfolio) use ($filterCategory) {
                 return str_contains(strtolower($portfolio['category']), strtolower($filterCategory));
@@ -64,7 +63,11 @@ class PortfolioController extends Controller
             $portfolios->count(),
             $perPage,
             $page,
-            ['path' => $request->url(), 'query' => $request->query()]
+            [
+                'path' => $request->url(), 
+                'query' => $request->query(),
+                'pageName' => 'page'
+            ]
         );
 
         $technologies = ['all', 'android', 'ios', 'web', 'androidtv'];
@@ -81,20 +84,62 @@ class PortfolioController extends Controller
         ];
 
         if ($request->ajax() || $request->get('ajax')) {
-            $html = '';
+            // Generate portfolio grid HTML
+            $portfolioGridHtml = '';
             if ($pagedPortfolios->count() > 0) {
                 foreach ($pagedPortfolios as $index => $portfolio) {
                     $delay = $index * 0.1;
                     $cardHtml = view('components.portfoliocard', ['portfolio' => $portfolio])->render();
-                    $html .= '<div class="animate-fade-in-up" style="animation-delay: ' . $delay . 's;">' . $cardHtml . '</div>';
+                    $portfolioGridHtml .= '<div class="animate-fade-in-up" style="animation-delay: ' . $delay . 's;">' . $cardHtml . '</div>';
                 }
             } else {
-                $html = '<div class="col-span-full text-center py-20 animate-fade-in"><div class="relative"><div class="absolute inset-0 flex items-center justify-center"><div class="w-32 h-32 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full animate-pulse opacity-50"></div></div><div class="relative z-10"><div class="text-gray-400 text-2xl mb-4 font-semibold">No projects found</div><p class="text-gray-500 text-lg">Try adjusting your filters to see more results.</p><div class="mt-6"><button id="view-all-btn" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105"><svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>View All Projects</button></div></div></div></div>';
+                $portfolioGridHtml = '
+                    <div class="col-span-full text-center py-20 animate-fade-in">
+                        <div class="relative">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-32 h-32 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full animate-pulse opacity-50"></div>
+                            </div>
+                            <div class="relative z-10">
+                                <div class="text-gray-400 text-2xl mb-4 font-semibold">No projects found</div>
+                                <p class="text-gray-500 text-lg">Try adjusting your filters to see more results.</p>
+                                <div class="mt-6">
+                                    <button id="view-all-btn" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-600 to-pink-500 text-white rounded-xl hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        View All Projects
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>';
             }
 
+            // Generate pagination HTML
+            $paginationHtml = '';
+            if ($pagedPortfolios->hasPages()) {
+                $paginationHtml = '
+                    <div class="mt-12 flex justify-center pagination-container">
+                        <nav class="inline-flex rounded-md shadow-sm" role="navigation" aria-label="Pagination">
+                            ' . $pagedPortfolios->appends($request->query())->links('pagination::tailwind')->toHtml() . '
+                        </nav>
+                    </div>';
+            }
+
+            // Combine grid and pagination
+            $fullHtml = '
+                <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    ' . $portfolioGridHtml . '
+                </div>
+                ' . $paginationHtml;
+
             return response()->json([
-                'html' => $html,
-                'count' => $pagedPortfolios->count()
+                'html' => $fullHtml,
+                'count' => $pagedPortfolios->count(),
+                'total' => $pagedPortfolios->total(),
+                'currentPage' => $pagedPortfolios->currentPage(),
+                'lastPage' => $pagedPortfolios->lastPage(),
+                'hasPages' => $pagedPortfolios->hasPages()
             ]);
         }
 
