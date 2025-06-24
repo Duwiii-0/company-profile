@@ -232,7 +232,8 @@
                                     </a>
                                 <a href="https://wa.me/628121302086" target="_blank"
                                     class="social-icon w-10 h-10 flex items-center justify-center">
-                                    <x-icons.whatsapp class="w-5 h-5" />
+                                         <img src="{{ Vite::asset('resources/images/instagramR.png') }}" alt="facebook"
+                                        class="w-full h-full object-cover">
                                 </a>
                                <a href="https://twitter.com/adipratama" target="_blank"
                                         class="social-icon w-10 h-10 flex items-center justify-center">

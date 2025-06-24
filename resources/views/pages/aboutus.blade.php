@@ -199,7 +199,7 @@
                     <div class="w-24 h-24  mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-all duration-300">
                         <div class="w-25 h-25 flex items-center justify-center">
                             <img src="{{ Vite::asset('resources/images/innovation.png') }}" alt="collab"
-                                class="w-full h-full object-cover">
+                                class="w-25 h-25 object-cover">
                         </div>
                     </div>
                     

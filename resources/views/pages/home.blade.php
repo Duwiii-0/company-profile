@@ -81,9 +81,9 @@
                     <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1200 z-20"></div>
 
                     <!-- Placeholder for CEO image -->
-                    <div class="h-full ">
+                    <div class="h-full w-full object-cover">
                         <div class="text-center">
-                            <img src="{{ Vite::asset('resources/images/Officeman.jpg') }}" alt="Adipratama Company"
+                            <img src="{{ Vite::asset('resources/images/profile.png') }}" alt="Adipratama Company"
                                  class="h-full object-cover">
                         </div>
                     </div>
@@ -926,8 +926,6 @@
     <section id="testi" class="py-16 pt-10 h-[90vh] bg-gray-100 ">
         <h2 class="text-5xl font-bold mb-20 text-black text-shadow-glow text-center">Experince Shared By<br>Our Clients</h2>
         <x-card />
-    </section>
-    <section id="testi" class="py-16 pt-10 h-[1vh] bg-gray-100 ">
-    </section>
+    </section>  
 </div>
 @endsection
