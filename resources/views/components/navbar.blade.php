@@ -37,7 +37,7 @@
 
         <!-- Contact Button - Fixed positioning -->
         <a href="{{ route('contact') }}"
-            class="text-red-700 bg-white px-6 py-2 rounded-full hover:bg-transparent hover:border-2 hover:border-white hover:text-white hover:shadow-lg transition-all duration-300 text-sm font-semibold cursor-pointer absolute right-4 border-2 border-transparent">
+            class="text-red-700 bg-white px-6 py-2 rounded-full hover:bg-transparent hover:border-2 hover:border-white hover:text-white hover:shadow-lg transition-all duration-600 text-sm font-semibold cursor-pointer absolute right-4 border-2 border-transparent">
             Contact Us
         </a>
     </nav>
