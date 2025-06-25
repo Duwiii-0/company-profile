@@ -125,7 +125,7 @@
             <div class="flex items-center space-x-4">
                 <a href="https://facebook.com/adipratama" target="_blank"
                     class="social-icon w-10 h-10 flex items-center justify-center hover:scale-110 transition-all duration-300">
-                    <x-icons.facebook class="w-5 h-5"/>
+                    <x-icons.facebook class="w-5 h-5" />
                 </a>
                 <a href="https://instagram.com/adipratama" target="_blank"
                     class="social-icon w-10 h-10 flex items-center justify-center hover:scale-110 transition-all duration-300">
@@ -147,50 +147,3 @@
         </div>
     </div>
 </footer>
-
-<style>
-    /* Custom hover effects for footer links */
-    .contact-item {
-        transition: all 0.3s ease;
-    }
-
-    .contact-item:hover {
-        transform: translateX(4px);
-    }
-
-    /* Social media hover effects */
-    .social-icon {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .social-icon::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-        transition: left 0.6s ease;
-    }
-
-    .social-icon:hover::before {
-        left: 100%;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .contact-item {
-            text-align: center;
-        }
-
-        footer .container {
-            text-align: center;
-        }
-
-        footer .grid {
-            text-align: left;
-        }
-    }
-</style>

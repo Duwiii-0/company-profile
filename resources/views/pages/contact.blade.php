@@ -1,197 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <style>
-        /* Contact Page Enhanced Styles */
-        .contact-container {
-            min-height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Content wrapper */
-        .content-wrapper {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Enhanced heading styles */
-        .contact-container h1 {
-            background: linear-gradient(135deg, #1f2937, #374151);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800;
-            letter-spacing: -0.025em;
-            line-height: 1.1;
-        }
-
-        .contact-container p {
-            color: #64748b;
-            font-weight: 400;
-            line-height: 1.7;
-        }
-
-        .contact-info-item h3 {
-            color: #1f2937 !important;
-            font-weight: 600;
-        }
-
-        .contact-info-item p {
-            color: #64748b !important;
-        }
-
-        /* Icon decorations */
-        .icon-decoration {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 15px;
-            height: 15px;
-            background: linear-gradient(135deg, #ef4444, #dc2626);
-            border-radius: 50%;
-            margin-right: 12px;
-            color: white;
-            font-size: 14px;
-            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
-        }
-
-        /* Enhanced form styling */
-        .enhanced-form-container {
-            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            border-radius: 20px;
-            padding: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .enhanced-form-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0.05) 0%, rgba(220, 38, 38, 0.05) 100%);
-            z-index: -1;
-        }
-
-        .enhanced-form-container h2 {
-            background: linear-gradient(135deg, #1f2937, #374151);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .enhanced-form-container .subtitle {
-            color: #64748b;
-            line-height: 1.6;
-        }
-
-        /* Form inputs */
-        .form-input {
-            background: rgba(255, 255, 255, 0.9);
-            border: 2px solid rgba(229, 231, 235, 0.5);
-            transition: all 0.3s ease;
-            font-size: 14px;
-            color: #374151;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: #ef4444;
-            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
-            background: rgba(255, 255, 255, 1);
-            transform: translateY(-2px);
-        }
-
-        .form-input::placeholder {
-            color: #9ca3af;
-            font-weight: 400;
-        }
-
-        /* Submit button */
-        .submit-btn {
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);
-            border: none;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .submit-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(239, 68, 68, 0.4);
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
-        }
-
-        .submit-btn:hover::before {
-            left: 100%;
-        }
-
-        .submit-btn:active {
-            transform: translateY(-1px);
-        }
-
-        /* Labels */
-        .form-label {
-            font-weight: 600;
-            color: #374151;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 1024px) {
-
-            .contact-container h1 {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .contact-container {
-                padding: 40px 0;
-            }
-
-            .contact-container h1 {
-                font-size: 2rem;
-                margin-bottom: 1rem;
-            }
-
-            .contact-info-item {
-                padding: 20px;
-            }
-
-            .social-icon {
-                width: 40px;
-                height: 40px;
-            }
-
-            .enhanced-form-container {
-                padding: 30px 20px;
-            }
-        }
-    </style>
 
     <div class="contact-container py-20">
 
@@ -212,7 +21,8 @@
 
                     <div class="grid md:grid-cols-2 gap-8">
                         <!-- Call Center -->
-                        <div class="bg-white pl-3 pt-3 pb-3 rounded-lg transition-all duration-300 hover:shadow-[-5px_5px_0_#FECACA] ">
+                        <div
+                            class="bg-white pl-3 pt-3 pb-3 rounded-lg transition-all duration-300 hover:shadow-[-5px_5px_0_#FECACA] ">
                             <h3 class="text-lg font-semibold mb-3 flex items-center">
                                 <span class="icon-decoration">
                                     <i class="fas fa-phone"></i>
@@ -225,7 +35,8 @@
                         </div>
 
                         <!-- Our Location -->
-                        <div class="bg-white pl-3 pt-3 pb-3 rounded-lg transition-all duration-300 hover:shadow-[-5px_5px_0_#FECACA] ">
+                        <div
+                            class="bg-white pl-3 pt-3 pb-3 rounded-lg transition-all duration-300 hover:shadow-[-5px_5px_0_#FECACA] ">
                             <h3 class="text-lg font-semibold mb-3 flex items-center">
                                 <span class="icon-decoration">
                                     <i class="fas fa-map-marker-alt"></i>
@@ -241,7 +52,8 @@
                         </div>
 
                         <!-- Email -->
-                        <div class="bg-white pl-3 pt-3 pb-3 rounded-lg transition-all duration-300 hover:shadow-[-5px_5px_0_#FECACA] ">
+                        <div
+                            class="bg-white pl-3 pt-3 pb-3 rounded-lg transition-all duration-300 hover:shadow-[-5px_5px_0_#FECACA] ">
                             <h3 class="text-lg font-semibold mb-3 flex items-center">
                                 <span class="icon-decoration">
                                     <i class="fas fa-envelope"></i>
@@ -252,7 +64,8 @@
                         </div>
 
                         <!-- Social Network -->
-                        <div class="bg-white pl-3 pt-3 pb-3 rounded-lg transition-all duration-300 hover:shadow-[-5px_5px_0_#FECACA] ">
+                        <div
+                            class="bg-white pl-3 pt-3 pb-3 rounded-lg transition-all duration-300 hover:shadow-[-5px_5px_0_#FECACA] ">
                             <h3 class="text-lg font-semibold mb-3 flex items-center">
                                 <span class="icon-decoration">
                                     <i class="fas fa-share-alt"></i>
@@ -273,7 +86,7 @@
                                 </a>
                                 <a href="https://wa.me/628121302086" target="_blank"
                                     class="social-icon w-9 h-9 flex items-center justify-center">
-                                         <img src="{{ Vite::asset('resources/images/instagramR.png') }}" alt="facebook"
+                                    <img src="{{ Vite::asset('resources/images/instagramR.png') }}" alt="facebook"
                                         class="w-full h-full object-cover">
                                 </a>
                                 <a href="https://twitter.com/adipratama" target="_blank"
