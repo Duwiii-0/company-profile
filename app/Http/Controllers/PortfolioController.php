@@ -12,24 +12,24 @@ class PortfolioController extends Controller
     {
         // Sample portfolio data - in real app, this would come from database
         $portfolios = collect([
-            [ 'id' => 1, 'title' => 'IndiHomeTV', 'category' => 'Streaming • Video on Demand', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
-            [ 'id' => 2, 'title' => 'JHO (BPJS Ketenagakerjaan)', 'category' => 'Insurance • Finance', 'technologies' => ['Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
-            [ 'id' => 3, 'title' => 'Eraspace', 'category' => 'E-commerce • Lifestyle', 'technologies' => ['Web', 'Android'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
-            [ 'id' => 4, 'title' => 'MRT Jakarta', 'category' => 'Transportation • Lifestyle', 'technologies' => ['Android', 'iOS', 'Web'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
-            [ 'id' => 5, 'title' => 'Paragon SPM', 'category' => 'Productivity • Sales Force', 'technologies' => ['Web', 'Android'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
-            [ 'id' => 6, 'title' => 'TIX ID', 'category' => 'Streaming • Video on Demand', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
-            [ 'id' => 7, 'title' => 'Daihatsu', 'category' => 'Automotive • Lifestyle', 'technologies' => ['Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
-            [ 'id' => 8, 'title' => 'Vovic', 'category' => 'Health • Wellness', 'technologies' => ['Web', 'Android'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
-            [ 'id' => 9, 'title' => 'Acer', 'category' => 'Technology • E-commerce', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
-            [ 'id' => 10, 'title' => 'Travelista', 'category' => 'Travel • Booking', 'technologies' => ['Web', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
-            [ 'id' => 11, 'title' => 'EduConnect', 'category' => 'Education • Platform', 'technologies' => ['Web', 'Android'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
-            [ 'id' => 12, 'title' => 'FitNation', 'category' => 'Health • Fitness', 'technologies' => ['Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
-            [ 'id' => 13, 'title' => 'Eventify', 'category' => 'Events • Ticketing', 'technologies' => ['Web'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
-            [ 'id' => 14, 'title' => 'GreenKart', 'category' => 'E-commerce • Groceries', 'technologies' => ['Android', 'Web'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
-            [ 'id' => 15, 'title' => 'FinLite', 'category' => 'Finance • Budgeting', 'technologies' => ['iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
-            [ 'id' => 16, 'title' => 'RideLink', 'category' => 'Transportation • Ridesharing', 'technologies' => ['Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'mobile' ],
-            [ 'id' => 17, 'title' => 'PetCare', 'category' => 'Health • Animals', 'technologies' => ['Web', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
-            [ 'id' => 18, 'title' => 'SkillBoost', 'category' => 'Education • Skills', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => 'resources/images/indihometv.png', 'type' => 'web' ],
+            ['id' => 1, 'title' => 'IndiHomeTV', 'category' => 'Streaming • Video on Demand', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => 'resources/images/mockup.png', 'type' => 'web'],
+            ['id' => 2, 'title' => 'JHO (BPJS Ketenagakerjaan)', 'category' => 'Insurance • Finance', 'technologies' => ['Android', 'iOS'], 'image' => 'resources/images/mockup.png', 'type' => 'mobile'],
+            ['id' => 3, 'title' => 'Eraspace', 'category' => 'E-commerce • Lifestyle', 'technologies' => ['Web', 'Android'], 'image' => 'resources/images/mockup.png', 'type' => 'web'],
+            ['id' => 4, 'title' => 'MRT Jakarta', 'category' => 'Transportation • Lifestyle', 'technologies' => ['Android', 'iOS', 'Web'], 'image' => 'resources/images/mockup.png', 'type' => 'mobile'],
+            ['id' => 5, 'title' => 'Paragon SPM', 'category' => 'Productivity • Sales Force', 'technologies' => ['Web', 'Android'], 'image' => 'resources/images/mockup.png', 'type' => 'web'],
+            ['id' => 6, 'title' => 'TIX ID', 'category' => 'Streaming • Video on Demand', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => 'resources/images/mockup.png', 'type' => 'mobile'],
+            ['id' => 7, 'title' => 'Daihatsu', 'category' => 'Automotive • Lifestyle', 'technologies' => ['Android', 'iOS'], 'image' => 'resources/images/mockup.png', 'type' => 'mobile'],
+            ['id' => 8, 'title' => 'Vovic', 'category' => 'Health • Wellness', 'technologies' => ['Web', 'Android'], 'image' => 'resources/images/mockup.png', 'type' => 'web'],
+            ['id' => 9, 'title' => 'Acer', 'category' => 'Technology • E-commerce', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => 'resources/images/mockup.png', 'type' => 'web'],
+            ['id' => 10, 'title' => 'Travelista', 'category' => 'Travel • Booking', 'technologies' => ['Web', 'iOS'], 'image' => 'resources/images/mockup.png', 'type' => 'web'],
+            ['id' => 11, 'title' => 'EduConnect', 'category' => 'Education • Platform', 'technologies' => ['Web', 'Android'], 'image' => 'resources/images/mockup.png', 'type' => 'web'],
+            ['id' => 12, 'title' => 'FitNation', 'category' => 'Health • Fitness', 'technologies' => ['Android', 'iOS'], 'image' => 'resources/images/mockup.png', 'type' => 'mobile'],
+            ['id' => 13, 'title' => 'Eventify', 'category' => 'Events • Ticketing', 'technologies' => ['Web'], 'image' => 'resources/images/mockup.png', 'type' => 'web'],
+            ['id' => 14, 'title' => 'GreenKart', 'category' => 'E-commerce • Groceries', 'technologies' => ['Android', 'Web'], 'image' => 'resources/images/mockup.png', 'type' => 'web'],
+            ['id' => 15, 'title' => 'FinLite', 'category' => 'Finance • Budgeting', 'technologies' => ['iOS'], 'image' => 'resources/images/mockup.png', 'type' => 'mobile'],
+            ['id' => 16, 'title' => 'RideLink', 'category' => 'Transportation • Ridesharing', 'technologies' => ['Android', 'iOS'], 'image' => 'resources/images/mockup.png', 'type' => 'mobile'],
+            ['id' => 17, 'title' => 'PetCare', 'category' => 'Health • Animals', 'technologies' => ['Web', 'iOS'], 'image' => 'resources/images/mockup.png', 'type' => 'web'],
+            ['id' => 18, 'title' => 'SkillBoost', 'category' => 'Education • Skills', 'technologies' => ['Web', 'Android', 'iOS'], 'image' => 'resources/images/mockup.png', 'type' => 'web'],
         ]);
 
 
@@ -65,7 +65,7 @@ class PortfolioController extends Controller
             $perPage,
             $page,
             [
-                'path' => $request->url(), 
+                'path' => $request->url(),
                 'query' => $request->query(),
                 'pageName' => 'page'
             ]
