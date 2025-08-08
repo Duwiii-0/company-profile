@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
-import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
     build: {
-        outDir: 'dist'
+        outDir: 'dist',
+        emptyOutDir: true,
     },
+    publicDir: 'public', // semua file di public akan di-copy ke dist
     plugins: [
         laravel({
             input: [
@@ -17,10 +18,5 @@ export default defineConfig({
             refresh: true,
         }),
         tailwindcss(),
-        viteStaticCopy({
-            targets: [
-                { src: 'public/_redirect', dest: '' }
-            ]
-        })
     ],
 });
